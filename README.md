@@ -3,9 +3,9 @@
 
 
 
-Olá somos a **LOGTECH**, muito prazer!   🧑‍🎓    👨‍💻   📈    📉    📊
+Olá somos a equipe **LOGTECH**, muito prazer!   🧑‍🎓    👨‍💻   📈    📉    📊
 
-Projeto baseado na metodologia Ágil Scrum, buscando desenvolver a proatividade, trabalho em equipe e entrega de resultados.
+Nesse projeto, nosso objetivo é desenvolver solução tecnológica para apoiar a gestão de logística da CPTM por meio do Business Intelligence.
 
 # LOGTECH
 
@@ -24,6 +24,7 @@ Template para os projetos do curso de Graduação em Logística, ensinando na ut
 Projeto baseado na metodologia ágil Scrum, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
 
 # Índice
+
 * [LOGTECH](#LOGTECH)
 * [Equipe](#equipe)
 * [Objetivo do Projeto](#objetivo-do-projeto)
@@ -32,12 +33,18 @@ Projeto baseado na metodologia ágil Scrum, procurando desenvolver a Proatividad
 * [Gráfico Burndown]((#gráfico-burndown))
 * [Competências desenvolvidas](#competências-desenvolvidas)
   
-  # Projeto (API) 
-O projeto API tem como o objetivo principal em desenvolver uma solução tecnológica baseada em Business Intelligencepara apoiar a gestão logística da CPTM.
+  # Projeto (API)
+
+A CPTM irá disponibilizar um extenso conjunto de dados brutos oriundos do seu sistema ERP ALVO, o que representa um desafio considerável. O principal objetivo é processar esses dados, realizando o tratamento, a organização e a análise, para transformá-los em informações claras, confiáveis e úteis que possam auxiliar na tomada de decisões.
+
+O foco central é a conversão desse grande volume de dados em uma visão mais ágil e eficiente do estoque. Isso possibilitará a identificação de diversas situações críticas, como excesso de materiais, estoques parados, riscos de ruptura, altos valores imobilizados e variações na movimentação dos itens.
+
+A solução proposta tem como meta otimizar a gestão do estoque, facilitando a detecção de problemas e aprimorando a eficiência operacional. 
 
 # Equipe
-|    Função     | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
-| :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+
+|   Função  | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
+| :-----------------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner |  |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)              |
 | Scrum Master  |  |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 | Team Member   |  |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)        |
