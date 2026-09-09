@@ -110,7 +110,7 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 - [ ] Teste e revise;
 - [ ] Documente instruções de uso;
 - [ ] Criação do vídeo;
-- [X] Finalize e aprovação.
+- [ ] Finalize e aprovação.
       
 ## Sprint 4
 - [ ] Defina o propósito do template;
