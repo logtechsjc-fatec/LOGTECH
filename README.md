@@ -1,10 +1,10 @@
-<img width="425" height="425" alt="image" src="https://github.com/user-attachments/assets/c9d3b527-47eb-4f4a-bde4-74f10f9f9463" />
-
+<img width="732" height="616" alt="Captura de tela 2026-09-09 075001" src="https://github.com/user-attachments/assets/b0fc3c7a-d37d-4c8b-aa65-75d8897af7d1" />
 
 
 
 
 Olá somos a **LOGTECH**, muito prazer!   🧑‍🎓    👨‍💻   📈    📉    📊
+
 Projeto baseado na metodologia Ágil Scrum, buscando desenvolver a proatividade, trabalho em equipe e entrega de resultados.
 
 # LOGTECH
