@@ -79,15 +79,21 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 
 | Rank | Prioridade | User Story                                                                                                |   Estimativa    | Sprint                                                                                                       
 |------|------------|------------|-----------------|---------------------------------------------------------------------------------------------------------------
-| 1    | Alta       | Como analista do projeto, quero realizar o levantamento da principal decisão do Dashboard, para direcionar o escopo e o layout da solução. | 6         | 1
-| 2    | Alta       | Como analista do projeto, quero mapear os perfis dos usuários finais, para adequar a experiência e os acessos da solução.                          | 5            | 1
-| 3    | Alta       | Como analista, quero visualizar os 3 principais indicadores na tela inicial do Dashboard, para acompanhar os resultados prioritários com rapidez.     | 6             | 1
-| 4    | Alta       | Como analista, quero que os cálculos de giro e cobertura de estoque sejam exibidos no Dashboard, para avaliar a eficiência operacional do estoque.    | 6             | 1
-| 5    | Alta       | Como analista, quero visualizar as métricas de ruptura, excesso, estoque parado e material crítico, para tomar ações preventivas na gestão de materiais. | 6              | 1
-| 6    | Alta       | Como equipe do projeto, quero validar as entregas da primeira Sprint com os stakeholders, para garantir o alinhamento com a direção estratégica.  | 6             | 1
-| 7    | Alta       | Como analista de dados, quero limpar e normalizar a base de dados do Google Colab usando Python, para garantir a qualidade e confiabilidade das análises.| 5  | 1
-| 8    | Alta       | Como equipe do projeto, quero versionar o código e artefatos no GitHub, para garantir a colaboração e rastreabilidade do projeto.        | 5      | 1
-
+| 1    | Alta       | Como engenheiro de dados, quero extrair e tratar os dados de estoque provenientes do ERP ALVO (RIOSOFT) para garantir a qualidade, consistência e eliminação de inconsistências da base. | 6         | 1
+| 2    | Alta       | Como arquiteto de dados, quero construir o pipeline de ETL e o modelo dimensional (fatos e dimensões) para permitir relacionamentos corretos e atualizações consistentes no Power BI.                        | 5            | 1
+| 3    | Alta       | Como equipe do projeto, quero utilizar uma ferramenta de versionamento (GitHub/GitLab) para organizar o código, scripts de ETL e histórico de artefatos.     | 2             | 1
+| 4    | Alta       | Como gestor de estoque da CPTM, quero visualizar o valor total, quantidade e estoque médio global para acompanhar o panorama geral dos suprimentos.    | 3             | 1
+| 5    | Alta       | Como analista logístico, quero filtrar os dados por tipo de material, almoxarifado, período e centro de custo para realizar análises segmentadas de estoque.  | 3              | 1
+| 6    | Alta       | Como gestor financeiro, quero calcular e visualizar a classificação Curva ABC dos materiais (por valor e criticidade A/B/C) para priorizar o controle dos itens de maior impacto financeiro. | 5             | 2
+| 7    | Alta       | Como analista de logística, quero calcular e acompanhar o giro de estoque e o tempo médio de permanência dos materiais para identificar a velocidade de rotatividade do inventário. | 5  | 2
+| 8    | Alta       | Como gestor de operações, quero consultar gráficos de evolução temporal de entradas, saídas e estoque retido para monitorar tendências ao longo do tempo.        | 5      | 2
+| 9    | Média       | Como analista de suprimentos, quero visualizar o ranking dos materiais mais relevantes financeiramente e sua participação percentual sobre o valor total do estoque.       | 3      | 2
+| 10    | Média       | Como gestor logístico, quero calcular a cobertura de estoque em dias/meses para prever a autonomia dos itens com base no consumo histórico.        | 5      | 1
+| 11    | Alta       | Como controlador de estoque, quero receber alertas automáticos de risco de ruptura (estoque crítico/baixo) para evitar a descontinuidade no abastecimento da manutenção.          | 5      | 3
+| 12    | Alta       | Como gestor de almoxarifado, quero receber alertas de estoque parado/obsoleto e excesso de estoque para reduzir custos de capital imobilizado.        | 5      | 3
+| 13    | Média       | Como designer de BI, quero ajustar o dashboard visualmente para que a interface seja intuitiva, responsiva e acessível em diferentes dispositivos (desktop/mobile).          | 3      | 3
+| 14    | Média       | Como analista técnico, quero elaborar o dicionário de dados, a documentação da arquitetura e o manual do usuário para garantir o correto entendimento e uso do painel.       | 3      | 3
+| 15    | Média       | CComo tomador de decisão da CPTM, quero visualizar análises preditivas de consumo e uma estrutura pronta para futuras integrações ao ERP corporativo.        | 5      | 3
 ## Sprint 1
 - [ ]  Defina o propósito do template;
 - [ ] Identifique os elementos principais;
