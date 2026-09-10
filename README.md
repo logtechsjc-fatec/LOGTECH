@@ -135,8 +135,7 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 * Implementação de filtros dinâmicos;
 * Criação do vídeo;
 * Validação;
-     
-# Gráfico Burndown
+ 
 
 # MKT
 
