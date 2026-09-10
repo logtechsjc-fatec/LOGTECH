@@ -19,9 +19,7 @@ Nossos valores fundamentam-se na honestidade, transparência, simplicidade, estr
 
 # Aprendizado por Projeto Integrador (API)
 
-Template para os projetos do curso de Graduação em Logística, ensinando na utilização do repositório digital "GitHub".
-
-Projeto baseado na metodologia ágil Scrum, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos.
+O Aprendizado por Projeto Integrador é uma metodologia que conecta teoria e prática, permitindo que os alunos trabalhem em equipe no desenvolvimento de projetos que envolvem diferentes áreas do conhecimento. A proposta incentiva a aplicação de conceitos aprendidos ao longo do curso para resolver problemas reais, além de estimular competências como colaboração, autonomia, proatividade e foco em resultados, especialmente quando associado a metodologias ágeis como o SCRUM.
 
 # Índice
 
