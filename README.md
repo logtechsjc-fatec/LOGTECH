@@ -46,7 +46,7 @@ A solução proposta tem como meta otimizar a gestão do estoque, facilitando a 
 |  Função  | Nome                                  |                                                                                                                                                      LinkedIn & GitHub                                                                                                                                                      |
 | :-----------------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner | Aline  |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)              |
-| Scrum Master  | André Ribeiro  |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)
+| Scrum Master  | André Carneiro Ribeiro  |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/andr%C3%A9-carneiro-ribeiro-073b73259/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 | Team Member   | Manoela  |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/)        |
 |  Team Member  | Lucas Barsaglini |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-barsaglini-71774b188/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Barsaglini99)   |
 |  Team Member  | João Victor Berlatos Dos Santos  |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joão-victor-santos-b54656338/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/joao3122br)     |
@@ -81,14 +81,14 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 
 | Rank | Prioridade | User Story                                                                                                |   Estimativa    | Sprint                                                                                                       
 |------|------------|------------|-----------------|---------------------------------------------------------------------------------------------------------------
-| 1    | Alta       | Como usuário quero saber qual é a principal decisão que vai ser tomado com o Dashboard? | 6            | 1
-| 2    | Alta       | Como usuário quero saber quem vai utilizar a solução?                          | 5            | 1
-| 3    | Alta       | Como analista quero saber quais são os 3 indicadores mais importantes para vocês?                 | 6             | 1
-| 4    | Alta       | Como analista quero saber como vovês calculam o giro e a cobertura atualmente?                 | 6             | 1
-| 5    | Alta       | Como analista quero saber como vocês definem a ruptura, excesso, estoque parado e material crítico? | 6              | 1
-| 6    | Alta       | Como equipe do projeto o que vocês esperam enxergar na primeira Sprint, para considerar que estamos na direção correta?   | 6             | 1
-| 7    | Alta       | Como analista, quero limpar e normalizar os dados do Google Colab usando Phyton para garantir qualidade e confiabilidade das análises.| 5  | 1
-| 8    | Alta       | Como equipe do projeto, quero armazenar código e artefatos no GitHub para garantir versionamento e colaboração.        | 5      | 1
+| 1    | Alta       | Como analista do projeto, quero realizar o levantamento da principal decisão do Dashboard, para direcionar o escopo e o layout da solução. | 6         | 1
+| 2    | Alta       | Como analista do projeto, quero mapear os perfis dos usuários finais, para adequar a experiência e os acessos da solução.                          | 5            | 1
+| 3    | Alta       | Como analista, quero visualizar os 3 principais indicadores na tela inicial do Dashboard, para acompanhar os resultados prioritários com rapidez.     | 6             | 1
+| 4    | Alta       | Como analista, quero que os cálculos de giro e cobertura de estoque sejam exibidos no Dashboard, para avaliar a eficiência operacional do estoque.    | 6             | 1
+| 5    | Alta       | Como analista, quero visualizar as métricas de ruptura, excesso, estoque parado e material crítico, para tomar ações preventivas na gestão de materiais. | 6              | 1
+| 6    | Alta       | Como equipe do projeto, quero validar as entregas da primeira Sprint com os stakeholders, para garantir o alinhamento com a direção estratégica.  | 6             | 1
+| 7    | Alta       | Como analista de dados, quero limpar e normalizar a base de dados do Google Colab usando Python, para garantir a qualidade e confiabilidade das análises.| 5  | 1
+| 8    | Alta       | Como equipe do projeto, quero versionar o código e artefatos no GitHub, para garantir a colaboração e rastreabilidade do projeto.        | 5      | 1
 
 ## Sprint 1
 - [ ]  Defina o propósito do template;
