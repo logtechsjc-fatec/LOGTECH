@@ -81,14 +81,14 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 
 | Rank | Prioridade | User Story                                                                                                |   Estimativa    | Sprint                                                                                                       
 |------|------------|------------|-----------------|---------------------------------------------------------------------------------------------------------------
-| 1    | Alta       | Qual é a principal decisão que vocês tomar com o Dashboard? | 6            | 1
-| 2    | Alta       | Quem vai utilizar a solução?                          | 5            | 1
-| 3    | Alta       | Quais são os 3 indicadores mais importantes para vocês?                 | 6             | 1
-| 4    | Alta       | Como vocês calculado o giro e a cobertura atualmente?                 | 6             | 1
-| 5    | Alta       | Como vocês definem a ruptura, excesso, estoque parado e material crítico? | 6              | 1
-| 6    | Alta       | O que vocês esperam enxergar na primeira Sprint, para considerar que estamos na direção correta?            | 6             | 1
-| 7    | Alta       | Como estudando de logística quero que na Sprint 3 o projeto esteja praticamente finalizado                  | 5              | 3
-| 8    | Alta       | Como estudante de logística espero que na Sprint 4 o projeto esteja finalizado com sucesso                  | 5             | 4
+| 1    | Alta       | Como usuário quero saber qual é a principal decisão que vai ser tomado com o Dashboard? | 6            | 1
+| 2    | Alta       | Como usuário quero saber quem vai utilizar a solução?                          | 5            | 1
+| 3    | Alta       | Como analista quero saber quais são os 3 indicadores mais importantes para vocês?                 | 6             | 1
+| 4    | Alta       | Como analista quero saber como vovês calculam o giro e a cobertura atualmente?                 | 6             | 1
+| 5    | Alta       | Como analista quero saber como vocês definem a ruptura, excesso, estoque parado e material crítico? | 6              | 1
+| 6    | Alta       | Como equipe do projeto o que vocês esperam enxergar na primeira Sprint, para considerar que estamos na direção correta?   | 6             | 1
+| 7    | Alta       | Como analista, quero limpar e normalizar os dados do Google Colab usando Phyton para garantir qualidade e confiabilidade das análises.| 5  | 1
+| 8    | Alta       | Como equipe do projeto, quero armazenar código e artefatos no GitHub para garantir versionamento e colaboração.        | 5      | 1
 
 ## Sprint 1
 - [ ]  Defina o propósito do template;
