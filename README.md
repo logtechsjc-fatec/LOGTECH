@@ -81,12 +81,12 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 
 | Rank | Prioridade | User Story                                                                                                |   Estimativa    | Sprint                                                                                                       
 |------|------------|------------|-----------------|---------------------------------------------------------------------------------------------------------------
-| 1    | Alta       | Como estudante de logística procuro analisar dados de acidentes de transito para concluir a primeira Sprint de forma correta com as pesquisas realizadas| 4              | 1
-| 2    | Alta       | Como estudante de logística vou entregar a Sprint 2 com os dados atualizados do projeto discutido com a equipe                           | 6             | 2
-| 3    | Alta       | Como estudando de logística quero que na Sprint 3 o projeto esteja praticamente finalizado                  | 5              | 3
-| 4    | Alta       | Como estudante de logística espero que na Sprint 4 o projeto esteja finalizado com sucesso                  | 5             | 4
-| 5    | Alta       | Como estudante de logística procuro analisar dados de acidentes de transito para concluir a primeira Sprint de forma correta com as pesquisas realizadas| 4              | 1
-| 6    | Alta       | Como estudante de logística vou entregar a Sprint 2 com os dados atualizados do projeto discutido com a equipe                           | 6             | 2
+| 1    | Alta       | Qual é a principal decisão que vocês tomar com o Dashboard? | 6            | 1
+| 2    | Alta       | Quem vai utilizar a solução?                          | 5            | 1
+| 3    | Alta       | Quais são os 3 indicadores mais importantes para vocês?                 | 6             | 1
+| 4    | Alta       | Como vocês calculado o giro e a cobertura atualmente?                 | 6             | 1
+| 5    | Alta       | Como vocês definem a ruptura, excesso, estoque parado e material crítico? | 6              | 1
+| 6    | Alta       | O que vocês esperam enxergar na primeira Sprint, para considerar que estamos na direção correta?            | 6             | 1
 | 7    | Alta       | Como estudando de logística quero que na Sprint 3 o projeto esteja praticamente finalizado                  | 5              | 3
 | 8    | Alta       | Como estudante de logística espero que na Sprint 4 o projeto esteja finalizado com sucesso                  | 5             | 4
 
@@ -134,9 +134,8 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 
 Sprint | Previsão | Status| Histórico|
 |------|--------|------|--------|
-|01| 00/09/2026 | em andamento | [Ver Relatório](https://) | 
-|02| 00/10/2026 | a fazer |[Ver Relatório](https://) | 
-|03| 00/00/2026 | a fazer |[Ver relatório](https://) | 
-|04| 00/00/2026 |a fazer |[Ver Relatório](https://)  | 
-|Feira de Soluções|29/05/2025 |a fazer |[Ver Relatório](https://) |
+|01| 02/10/2026 | em andamento | [Ver Relatório](https://) | 
+|02| 30/10/2026 | a fazer |[Ver Relatório](https://) | 
+|03| 27/11/2026 | a fazer |[Ver relatório](https://) |  
+|Feira de Soluções|03/12/2026 |a fazer |[Ver Relatório](https://) |
 
