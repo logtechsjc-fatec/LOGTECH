@@ -105,10 +105,23 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 * Desenvolva o design;
 * Criação do vídeo;
 * Finalize e aprovação;
+* Definir o plano inicial do projeto;
+* Importar e tratar a base de dados do ERP ALVO;
+* ETL e limpeza de Dados;
+* Documentação e Escopo:
+* Criação do modelo Dimensional;
+* Visão Geral e KPI's
+* Criar Protótipo Power Bi;
+* Entregar o back-end funcional;
 
 ## Sprint 2
 * Foco na implementação das regras de negócio logísticas (Giro, Curva ABC, Cobertura em Dias e Ranking Financeiro) e análise histórica de entradas/saídas;
+* Análise financeira e Ranking de materiais;
+* Classificação da Curva ABC automática;
+* Construção do Dashboard Principal;
+* Implementação de filtros dinâmico;
 * Monitoramento e ajustes;
+* Validação;
 
 ## Sprint 3
 * Foco nos alertas inteligentes (ruptura, obsolescência e excesso), refinamento de interface/responsividade, documentação/manual e análises preditivas;  
@@ -116,12 +129,19 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 * Identifique os elementos principais;
 * Esboce o layout;
 * Desenvolva o design;
+* Análise financeira e Ranking de materiais;
+* Classificação da Curva ABC Automática;
+* Construção do Dashboard Principal;
+* Implementação de filtros dinâmicos;
 * Criação do vídeo;
+* Validação;
      
 # Gráfico Burndown
 
 # MKT
 
+* Vídeo de Entendimento sobre o Projeto
+  
 https://youtube.com/@logtech-l5c?si=1088QxAbd1m3u8M2
 
 
