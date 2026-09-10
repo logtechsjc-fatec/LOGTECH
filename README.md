@@ -90,7 +90,7 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 | 7    | Alta       | Como analista de logística, quero calcular e acompanhar o giro de estoque e o tempo médio de permanência dos materiais para identificar a velocidade de rotatividade do inventário. | 5  | 2
 | 8    | Alta       | Como gestor de operações, quero consultar gráficos de evolução temporal de entradas, saídas e estoque retido para monitorar tendências ao longo do tempo.        | 5      | 2
 | 9    | Média       | Como analista de suprimentos, quero visualizar o ranking dos materiais mais relevantes financeiramente e sua participação percentual sobre o valor total do estoque.       | 3      | 2
-| 10    | Média       | Como gestor logístico, quero calcular a cobertura de estoque em dias/meses para prever a autonomia dos itens com base no consumo histórico.        | 5      | 1
+| 10    | Média       | Como gestor logístico, quero calcular a cobertura de estoque em dias/meses para prever a autonomia dos itens com base no consumo histórico.        | 5      | 2
 | 11    | Alta       | Como controlador de estoque, quero receber alertas automáticos de risco de ruptura (estoque crítico/baixo) para evitar a descontinuidade no abastecimento da manutenção.          | 5      | 3
 | 12    | Alta       | Como gestor de almoxarifado, quero receber alertas de estoque parado/obsoleto e excesso de estoque para reduzir custos de capital imobilizado.        | 5      | 3
 | 13    | Média       | Como designer de BI, quero ajustar o dashboard visualmente para que a interface seja intuitiva, responsiva e acessível em diferentes dispositivos (desktop/mobile).          | 3      | 3
