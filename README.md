@@ -26,10 +26,12 @@ O Aprendizado por Projeto Integrador é uma metodologia que conecta teoria e pr�
 * [LOGTECH](#LOGTECH)
 * [Equipe](#equipe)
 * [Objetivo do Projeto](#objetivo-do-projeto)
+* [Competências desenvolvidas](#competências-desenvolvidas)
 * [Sprints](#Sprints)
 * [Backlog do produto](#Backlog-do-produto)
+* [Sprints](#Sprints)
 * [Gráfico Burndown]((#gráfico-burndown))
-* [Competências desenvolvidas](#competências-desenvolvidas)
+* [MKT](#MKT)
   
   # Projeto (API)
 
@@ -94,45 +96,35 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 | 13    | Média       | Como designer de BI, quero ajustar o dashboard visualmente para que a interface seja intuitiva, responsiva e acessível em diferentes dispositivos (desktop/mobile).          | 3      | 3
 | 14    | Média       | Como analista técnico, quero elaborar o dicionário de dados, a documentação da arquitetura e o manual do usuário para garantir o correto entendimento e uso do painel.       | 3      | 3
 | 15    | Média       | CComo tomador de decisão da CPTM, quero visualizar análises preditivas de consumo e uma estrutura pronta para futuras integrações ao ERP corporativo.        | 5      | 3
+
+
 ## Sprint 1
-- [ ]  Defina o propósito do template;
-- [ ] Identifique os elementos principais;
-- [ ] Esboce o layout;
-- [ ] Escolha cores e fontes;
-- [ ] Desenvolva o design;
-- [ ] Teste e revise;
-- [ ] Documente instruções de uso;
-- [ ] Criação do vídeo;
-- [ ] Finalize e aprovação.
+* Foco na extração, limpeza, modelagem dimensional dos dados do ERP ALVO, versionamento de código e criação do layout/filtros fundamentais da visão geral do estoque;
+* Defina o propósito do template;
+* Identifique os elementos principais;
+* Esboce o layout;
+* Desenvolva o design;
+* Criação do vídeo;
+* Finalize e aprovação;
 
 ## Sprint 2
-- [ ] Documento passo a passo;
-- [ ] Vídeo passo a passo;
-- [ ] Treinamento com os professores;
-- [ ] Treinamento com os alunos;
-- [ ] Monitoramento e ajustes:
+* Foco na implementação das regras de negócio logísticas (Giro, Curva ABC, Cobertura em Dias e Ranking Financeiro) e análise histórica de entradas/saídas;
+* Monitoramento e ajustes;
 
 ## Sprint 3
-- [ ] Defina o propósito do template;
-- [ ] Identifique os elementos principais;
-- [ ] Esboce o layout;
-- [ ] Escolha cores e fontes;
-- [ ] Desenvolva o design;
-- [ ] Teste e revise;
-- [ ] Documente instruções de uso;
-- [ ] Criação do vídeo;
-- [ ] Finalize e aprovação.
-      
-## Sprint 4
-- [ ] Defina o propósito do template;
-- [ ] Identifique os elementos principais;
-- [ ] Esboce o layout;
-- [ ] Escolha cores e fontes;
-- [ ] Desenvolva o design;
-- [ ] Teste e revise;
-- [ ] Documente instruções de uso;
-- [ ] Criação do vídeo;
-- [ ] Finalize e aprovação.
+* Foco nos alertas inteligentes (ruptura, obsolescência e excesso), refinamento de interface/responsividade, documentação/manual e análises preditivas;  
+* Defina o propósito do template;
+* Identifique os elementos principais;
+* Esboce o layout;
+* Desenvolva o design;
+* Criação do vídeo;
+     
+# Gráfico Burndown
+
+# MKT
+
+https://youtube.com/@logtech-l5c?si=1088QxAbd1m3u8M2
+
 
 # Registro das Sprints
 
