@@ -85,10 +85,10 @@ Este projeto tem como objetivo ajudar e facilitar na utilização da plataforma 
 | 2    | Alta       | Como estudante de logística vou entregar a Sprint 2 com os dados atualizados do projeto discutido com a equipe                           | 6             | 2
 | 3    | Alta       | Como estudando de logística quero que na Sprint 3 o projeto esteja praticamente finalizado                  | 5              | 3
 | 4    | Alta       | Como estudante de logística espero que na Sprint 4 o projeto esteja finalizado com sucesso                  | 5             | 4
-| 1    | Alta       | Como estudante de logística procuro analisar dados de acidentes de transito para concluir a primeira Sprint de forma correta com as pesquisas realizadas| 4              | 1
-| 2    | Alta       | Como estudante de logística vou entregar a Sprint 2 com os dados atualizados do projeto discutido com a equipe                           | 6             | 2
-| 3    | Alta       | Como estudando de logística quero que na Sprint 3 o projeto esteja praticamente finalizado                  | 5              | 3
-| 4    | Alta       | Como estudante de logística espero que na Sprint 4 o projeto esteja finalizado com sucesso                  | 5             | 4
+| 5    | Alta       | Como estudante de logística procuro analisar dados de acidentes de transito para concluir a primeira Sprint de forma correta com as pesquisas realizadas| 4              | 1
+| 6    | Alta       | Como estudante de logística vou entregar a Sprint 2 com os dados atualizados do projeto discutido com a equipe                           | 6             | 2
+| 7    | Alta       | Como estudando de logística quero que na Sprint 3 o projeto esteja praticamente finalizado                  | 5              | 3
+| 8    | Alta       | Como estudante de logística espero que na Sprint 4 o projeto esteja finalizado com sucesso                  | 5             | 4
 
 ## Sprint 1
 - [ ]  Defina o propósito do template;
