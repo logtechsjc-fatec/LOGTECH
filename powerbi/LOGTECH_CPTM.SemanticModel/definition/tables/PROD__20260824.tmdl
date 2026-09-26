@@ -1,0 +1,711 @@
+table PROD__20260824
+	lineageTag: 94a423ef-c96c-4484-a811-5b79feed4468
+
+	column Alternativo
+		dataType: int64
+		formatString: 0
+		lineageTag: a88f607b-d687-433d-8317-412b250e2c04
+		summarizeBy: none
+		sourceColumn: Alternativo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nome
+		dataType: string
+		lineageTag: ddd67edd-66e0-4bff-bde3-c60e8cce75f9
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observação
+		dataType: string
+		lineageTag: e50f6b15-2398-4690-bf0e-ec256045d975
+		summarizeBy: none
+		sourceColumn: Observação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código do Desenho'
+		dataType: string
+		lineageTag: f759db1c-f9ba-4a71-ae41-80ff73fc5377
+		summarizeBy: none
+		sourceColumn: Código do Desenho
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estruturado
+		dataType: string
+		lineageTag: a1584d6c-98ee-4bce-9795-420a17f3743b
+		summarizeBy: none
+		sourceColumn: Estruturado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupo
+		dataType: string
+		lineageTag: 8dd13804-dcee-49df-bc57-422026f3c9f1
+		summarizeBy: none
+		sourceColumn: Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reduzido
+		dataType: int64
+		formatString: 0
+		lineageTag: 1343305e-768a-41be-b652-53aaf7fcd612
+		summarizeBy: sum
+		sourceColumn: Reduzido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Alternativo 1'
+		dataType: string
+		lineageTag: 73607c7d-c526-4f9f-b5e1-48b0c9ecf5dd
+		summarizeBy: none
+		sourceColumn: Alternativo 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código de Barras'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e8bd169-954f-42de-aa50-83726ebad527
+		summarizeBy: sum
+		sourceColumn: Código de Barras
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Alternativo 1'
+		dataType: string
+		lineageTag: d88eda27-3646-4f63-a098-7985a3ba4983
+		summarizeBy: none
+		sourceColumn: Nome Alternativo 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Alternativo 2'
+		dataType: string
+		lineageTag: b7fa4ace-ca77-47ab-8f92-dc3c377477df
+		summarizeBy: none
+		sourceColumn: Nome Alternativo 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Alternativo 3'
+		dataType: string
+		lineageTag: 176e7712-2f9c-479b-87eb-2efd4417eb8e
+		summarizeBy: none
+		sourceColumn: Nome Alternativo 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo do Produto'
+		dataType: string
+		lineageTag: 54f83028-4ff9-4cb9-ad8b-17b53e78f425
+		summarizeBy: none
+		sourceColumn: Tipo do Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo da Mídia'
+		dataType: string
+		lineageTag: b7b786eb-af09-4b5d-a74c-d7f707caf8df
+		summarizeBy: none
+		sourceColumn: Tipo da Mídia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classificação Fiscal'
+		dataType: string
+		lineageTag: fc84cfab-5acb-4733-a3a9-be7251f7bdb8
+		summarizeBy: none
+		sourceColumn: Classificação Fiscal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Baixa Estoque Composição'
+		dataType: string
+		lineageTag: fbde17cb-4abd-4589-bd89-7c801a5883ad
+		summarizeBy: none
+		sourceColumn: Baixa Estoque Composição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Produto Fiscal (SPED)'
+		dataType: string
+		lineageTag: 696a409a-f4e9-49a6-968b-92d6dd5212d8
+		summarizeBy: none
+		sourceColumn: Tipo Produto Fiscal (SPED)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gênero do Serviço'
+		dataType: string
+		lineageTag: a8b89c80-d7eb-4180-99c1-82716665b184
+		summarizeBy: none
+		sourceColumn: Gênero do Serviço
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comprimento Entra no Cálculdo do Espaço'
+		dataType: string
+		lineageTag: 0eeed43d-f3a2-4f20-8e6b-91afecc8751f
+		summarizeBy: none
+		sourceColumn: Comprimento Entra no Cálculdo do Espaço
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Largura Entra no Cálculo do Espaço'
+		dataType: string
+		lineageTag: 9e365351-4485-41ca-b923-5e0f645fad54
+		summarizeBy: none
+		sourceColumn: Largura Entra no Cálculo do Espaço
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Altura Entra no Cálculo do Espaço'
+		dataType: string
+		lineageTag: 94ae27b1-fe29-4565-a1a4-20ca904bd872
+		summarizeBy: none
+		sourceColumn: Altura Entra no Cálculo do Espaço
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Entra na Pesquisa Aplicação Externa'
+		dataType: string
+		lineageTag: e0286dd0-1270-4104-afe7-0ade3309439a
+		summarizeBy: none
+		sourceColumn: Entra na Pesquisa Aplicação Externa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualiza na Página Principal em Aplicações Externas'
+		dataType: string
+		lineageTag: ad1ac997-ce75-47c3-adfe-8c2d40072c9b
+		summarizeBy: none
+		sourceColumn: Visualiza na Página Principal em Aplicações Externas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aparece Destacado em Aplicações Externas'
+		dataType: string
+		lineageTag: a7232f41-866c-43ee-b5f7-e9e65ebccc41
+		summarizeBy: none
+		sourceColumn: Aparece Destacado em Aplicações Externas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 5efecf0a-197c-4215-b8b5-c3b38ece7119
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Utilização do Produto'
+		dataType: string
+		lineageTag: c6a22e18-1fa8-4f14-a7cb-77eb5ac6d1b8
+		summarizeBy: none
+		sourceColumn: Utilização do Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Norma Aplicação'
+		dataType: string
+		lineageTag: 7f6a4400-4e88-408d-8e57-26c7770e1202
+		summarizeBy: none
+		sourceColumn: Norma Aplicação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo de Consumo'
+		dataType: string
+		lineageTag: 049325a2-133e-4004-9116-b49648253a24
+		summarizeBy: none
+		sourceColumn: Tipo de Consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe BEC'
+		dataType: int64
+		formatString: 0
+		lineageTag: dd0c2732-1ee5-4b64-bdb6-59a307454fef
+		summarizeBy: sum
+		sourceColumn: Classe BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ação
+		dataType: string
+		lineageTag: d3cddcd5-5d6f-44d4-930b-5d26f0958829
+		summarizeBy: none
+		sourceColumn: Ação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Custo Pesquisa'
+		dataType: double
+		lineageTag: a04945dc-9970-4cc6-8ce1-371515af109b
+		summarizeBy: sum
+		sourceColumn: Custo Pesquisa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Crítico
+		dataType: string
+		lineageTag: 19341cf5-6add-4128-8ea1-50d5ee2c6139
+		summarizeBy: none
+		sourceColumn: Crítico
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prazo de Validade'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fefd970-d372-4f55-8c75-4e48641c4769
+		summarizeBy: sum
+		sourceColumn: Prazo de Validade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Área Localizada'
+		dataType: string
+		lineageTag: 9fcf96cc-7e1d-4a34-acfb-91202e78188d
+		summarizeBy: none
+		sourceColumn: Área Localizada
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo da Estrutura'
+		dataType: string
+		lineageTag: 546af07f-43b7-43b3-81a8-ed715d7590dc
+		summarizeBy: none
+		sourceColumn: Tipo da Estrutura
+
+		annotation SummarizationSetBy = Automatic
+
+	column Iluminação
+		dataType: string
+		lineageTag: 0d84704d-a183-470e-bcd2-72dbb7887eaf
+		summarizeBy: none
+		sourceColumn: Iluminação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Iluminação'
+		dataType: string
+		lineageTag: da4035ee-f018-42b4-bc3b-142acc4284a1
+		summarizeBy: none
+		sourceColumn: Tipo Iluminação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Responsável Energia Elétrica'
+		dataType: string
+		lineageTag: 30a9289f-fde3-4c91-847d-0b6533101167
+		summarizeBy: none
+		sourceColumn: Responsável Energia Elétrica
+
+		annotation SummarizationSetBy = Automatic
+
+	column Junção
+		dataType: string
+		lineageTag: dee3482a-a2b8-4b58-9daa-5bd2ffdb58a2
+		summarizeBy: none
+		sourceColumn: Junção
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Exclui IPI do Crédito do PIS/COFINS'
+		dataType: string
+		lineageTag: ce7c549f-0783-4ff1-befb-6b71980be28d
+		summarizeBy: none
+		sourceColumn: Exclui IPI do Crédito do PIS/COFINS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Múltipla Aprovação Cotação Compra'
+		dataType: string
+		lineageTag: d13e3df0-0317-4ed9-ba24-3845e4099762
+		summarizeBy: none
+		sourceColumn: Múltipla Aprovação Cotação Compra
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Base Lote Controle Esterilização'
+		dataType: string
+		lineageTag: d5ad5573-6bf7-4489-bc85-adcf1fa73706
+		summarizeBy: none
+		sourceColumn: Base Lote Controle Esterilização
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Exclui Frete/Seguro do Crédito do PIS/COFINS'
+		dataType: string
+		lineageTag: f47cf813-2bca-49be-9107-668e085a9543
+		summarizeBy: none
+		sourceColumn: Exclui Frete/Seguro do Crédito do PIS/COFINS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Solicita Cartão Kanban'
+		dataType: string
+		lineageTag: f2abe549-7850-440e-a636-6efeaae6744e
+		summarizeBy: none
+		sourceColumn: Solicita Cartão Kanban
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Utiliza Atendimento Pedido de Venda'
+		dataType: string
+		lineageTag: cfdca472-de9d-4d51-a187-368565c96448
+		summarizeBy: none
+		sourceColumn: Utiliza Atendimento Pedido de Venda
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Calcula Quantidade Composição'
+		dataType: string
+		lineageTag: f9f612c9-1a0b-4e43-bd9f-0a88f4ec0861
+		summarizeBy: none
+		sourceColumn: Calcula Quantidade Composição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incluir o Valor da Composição no Item'
+		dataType: string
+		lineageTag: d61f57b1-23d4-4ad8-a9cd-1f5f41e4d0cf
+		summarizeBy: none
+		sourceColumn: Incluir o Valor da Composição no Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Natureza de Rendimento R-4000'
+		dataType: string
+		lineageTag: d5f83b94-eea5-4b6b-912e-a324381f3f8a
+		summarizeBy: none
+		sourceColumn: Natureza de Rendimento R-4000
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auto Retenção'
+		dataType: string
+		lineageTag: 8195ee18-49ee-4db0-8bb9-1071309c0f66
+		summarizeBy: none
+		sourceColumn: Auto Retenção
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo de Ligação'
+		dataType: string
+		lineageTag: 22bc6343-4f77-4831-962f-e56de0f4281c
+		summarizeBy: none
+		sourceColumn: Tipo de Ligação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Segmento Rocha'
+		dataType: string
+		lineageTag: 96cfac67-4892-4d75-8c49-3a5fa285172f
+		summarizeBy: none
+		sourceColumn: Segmento Rocha
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gerar Ordem de Produção pelo Pedido Venda'
+		dataType: string
+		lineageTag: 48668be3-0c79-4900-90cc-d55410025da3
+		summarizeBy: none
+		sourceColumn: Gerar Ordem de Produção pelo Pedido Venda
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Finaliza OP automaticamente ao Atingir Qtd Necessá'
+		dataType: string
+		lineageTag: b83371d9-92ee-4a96-9ae7-df5770f1d6eb
+		summarizeBy: none
+		sourceColumn: Finaliza OP automaticamente ao Atingir Qtd Necessá
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Obriga Atendimento da RM na Liberação da OP'
+		dataType: string
+		lineageTag: 633a9bb0-8602-4386-a98f-0d5b3ca5c020
+		summarizeBy: none
+		sourceColumn: Obriga Atendimento da RM na Liberação da OP
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Controla Grade Mix'
+		dataType: string
+		lineageTag: 71f9335b-adda-486a-acb6-9970c3ac9d37
+		summarizeBy: none
+		sourceColumn: Controla Grade Mix
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Integra com Alvo CRM Top'
+		dataType: string
+		lineageTag: 644b3ced-00a5-4cd2-889d-1367fc683208
+		summarizeBy: none
+		sourceColumn: Integra com Alvo CRM Top
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Envio Pesquisa de Preço'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 47ddb490-2d21-4b11-b4e4-130d244ae603
+		summarizeBy: none
+		sourceColumn: Envio Pesquisa de Preço
+
+		variation Variation
+			isDefault
+			relationship: 50a40f2b-6cb1-4356-805e-c6aa69399497
+			defaultHierarchy: LocalDateTable_db5c79a1-4f3e-44c0-8558-16fe91f45dea.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Custo Pesquisa OBS'
+		dataType: string
+		lineageTag: a6bdf4af-ddde-4cea-a61c-3cdc9c7cdfcd
+		summarizeBy: none
+		sourceColumn: Valor Custo Pesquisa OBS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Custo Pesquisa Data'
+		dataType: string
+		lineageTag: 75988bac-7789-4977-b699-264ba7f18e50
+		summarizeBy: none
+		sourceColumn: Custo Pesquisa Data
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Distruibuição Pesquisa'
+		dataType: string
+		lineageTag: 8351d441-e9e4-4913-b28d-46b3024e13fa
+		summarizeBy: none
+		sourceColumn: Distruibuição Pesquisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Natureza de Despesa - BEC'
+		dataType: string
+		lineageTag: dcf78a97-c418-48a5-80d0-df0cf6fe5643
+		summarizeBy: none
+		sourceColumn: Natureza de Despesa - BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seq Inventário'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ccfa618-1bc3-4e62-8ceb-bf4e780606ad
+		summarizeBy: sum
+		sourceColumn: Seq Inventário
+
+		annotation SummarizationSetBy = Automatic
+
+	column Prioridade
+		dataType: string
+		lineageTag: f21796d6-e9c4-4a1f-b61f-7af1af2af136
+		summarizeBy: none
+		sourceColumn: Prioridade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod ICMS ST'
+		dataType: string
+		lineageTag: ab40735f-55f7-406b-9bc5-3ab486ddd5aa
+		summarizeBy: none
+		sourceColumn: Cod ICMS ST
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classificação ABNT NBR 10.004'
+		dataType: string
+		lineageTag: 4fe76d46-1a40-4136-90c2-750eb156d8f6
+		summarizeBy: none
+		sourceColumn: Classificação ABNT NBR 10.004
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descarte Leilão'
+		dataType: string
+		lineageTag: fc6047ec-a769-46c5-bacd-6fa149062106
+		summarizeBy: none
+		sourceColumn: Descarte Leilão
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descarte Doação'
+		dataType: string
+		lineageTag: 9b6d352b-c9a6-432c-b080-74735ca0fe76
+		summarizeBy: none
+		sourceColumn: Descarte Doação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descarte Reuso'
+		dataType: string
+		lineageTag: 610055f4-653b-464f-b5e0-52042ce70bb8
+		summarizeBy: none
+		sourceColumn: Descarte Reuso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descarte Reciclagem'
+		dataType: string
+		lineageTag: 520dfe41-6f8b-4bfa-a76e-9ede9396ea46
+		summarizeBy: none
+		sourceColumn: Descarte Reciclagem
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Produto Controlado'
+		dataType: string
+		lineageTag: 87fac000-646b-4a1f-8f4c-754561ed18e2
+		summarizeBy: none
+		sourceColumn: Produto Controlado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descarte Aterro/Tratamento'
+		dataType: string
+		lineageTag: e31933c8-d378-4098-9c96-c11a7d035cc8
+		summarizeBy: none
+		sourceColumn: Descarte Aterro/Tratamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Previsível
+		dataType: string
+		lineageTag: 3c75a26c-9738-4217-9fbb-dce07b92c13e
+		summarizeBy: none
+		sourceColumn: Previsível
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recupera IBS UF'
+		dataType: string
+		lineageTag: 975e2234-0c88-40a5-af3f-06d59ad6fba2
+		summarizeBy: none
+		sourceColumn: Recupera IBS UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recupera IBS Município'
+		dataType: string
+		lineageTag: 79d01529-c801-4b39-abab-d04bd2d60f8c
+		summarizeBy: none
+		sourceColumn: Recupera IBS Município
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recupera CBS'
+		dataType: string
+		lineageTag: ed530ceb-f063-4215-a024-2fb43483d85f
+		summarizeBy: none
+		sourceColumn: Recupera CBS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fabricação Escala Relevante'
+		dataType: string
+		lineageTag: 13f71e24-8e12-4870-8b5a-9748abdda0fc
+		summarizeBy: none
+		sourceColumn: Fabricação Escala Relevante
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Desconsidera Pesagem'
+		dataType: string
+		lineageTag: a675c71b-11cc-4cb0-8cc1-5fb5fdebdd1c
+		summarizeBy: none
+		sourceColumn: Desconsidera Pesagem
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Possui Dimensão na Produção'
+		dataType: string
+		lineageTag: 56996e0f-6ca4-462f-9221-6cfdc2daba3e
+		summarizeBy: none
+		sourceColumn: Possui Dimensão na Produção
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Habilita Comprimento Produção'
+		dataType: string
+		lineageTag: 830d30ff-b97e-4cba-9ed3-d3b4c61ab7e9
+		summarizeBy: none
+		sourceColumn: Habilita Comprimento Produção
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Habilita Largura Produção'
+		dataType: string
+		lineageTag: eb0a7a9c-c02f-45f4-9a57-b256840e689c
+		summarizeBy: none
+		sourceColumn: Habilita Largura Produção
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Habilita Altura (Espessura) Produção'
+		dataType: string
+		lineageTag: d498150f-3fa7-4e0f-b281-b7d532265381
+		summarizeBy: none
+		sourceColumn: Habilita Altura (Espessura) Produção
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Consumo Estoque' =
+			VAR t47 = CALCULATE ( MAX ( RES47_20260824[Tipo Consumo] ) )
+			VAR t75 = CALCULATE ( MAX ( RES75_20260824[Tipo Consumo] ) )
+			RETURN COALESCE ( t47, t75, "Não informado" )
+		dataType: string
+		lineageTag: 287dfe79-cbf8-4177-a131-580160a76133
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe ABC' =
+			VAR c = LOOKUPVALUE ( CurvaABC[Classe ABC], CurvaABC[Cód. Estr.], PROD__20260824[Estruturado] )
+			RETURN IF ( ISBLANK ( c ), "Sem estoque", c )
+		dataType: string
+		lineageTag: d3b30a16-2d52-4deb-b58d-21aa9865e67b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Material (código - nome)' =
+			FORMAT ( PROD__20260824[Alternativo], "0" ) & " - " & PROD__20260824[Nome]
+		dataType: string
+		lineageTag: da5ae95c-9152-42a6-83bb-807888790e90
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PROD__20260824 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "1. PROD__20260824_V1.xlsx"), null, true),
+				    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Alternativo", Int64.Type}, {"Nome", type text}, {"Observação", type text}, {"Código do Desenho", type text}, {"Estruturado", type text}, {"Grupo", type text}, {"Reduzido", Int64.Type}, {"Alternativo 1", type text}, {"Código de Barras", Int64.Type}, {"Nome Alternativo 1", type text}, {"Nome Alternativo 2", type text}, {"Nome Alternativo 3", type any}, {"Tipo do Produto", type text}, {"Tipo da Mídia", type text}, {"Classificação Fiscal", type text}, {"Baixa Estoque Composição", type text}, {"Tipo Produto Fiscal (SPED)", type text}, {"Gênero do Serviço", type text}, {"Comprimento Entra no Cálculdo do Espaço", type text}, {"Largura Entra no Cálculo do Espaço", type text}, {"Altura Entra no Cálculo do Espaço", type text}, {"Entra na Pesquisa Aplicação Externa", type text}, {"Visualiza na Página Principal em Aplicações Externas", type text}, {"Aparece Destacado em Aplicações Externas", type text}, {"Status", type text}, {"Utilização do Produto", type text}, {"Norma Aplicação", type text}, {"Tipo de Consumo", type text}, {"Classe BEC", Int64.Type}, {"Ação", type text}, {"Custo Pesquisa", type number}, {"Crítico", type text}, {"Prazo de Validade", Int64.Type}, {"Área Localizada", type text}, {"Tipo da Estrutura", type text}, {"Iluminação", type text}, {"Tipo Iluminação", type text}, {"Responsável Energia Elétrica", type text}, {"Junção", type text}, {"Exclui IPI do Crédito do PIS/COFINS", type text}, {"Múltipla Aprovação Cotação Compra", type text}, {"Base Lote Controle Esterilização", type text}, {"Exclui Frete/Seguro do Crédito do PIS/COFINS", type text}, {"Solicita Cartão Kanban", type text}, {"Utiliza Atendimento Pedido de Venda", type text}, {"Calcula Quantidade Composição", type text}, {"Incluir o Valor da Composição no Item", type text}, {"Natureza de Rendimento R-4000", type any}, {"Auto Retenção", type text}, {"Tipo de Ligação", type text}, {"Segmento Rocha", type text}, {"Gerar Ordem de Produção pelo Pedido Venda", type text}, {"Finaliza OP automaticamente ao Atingir Qtd Necessá", type text}, {"Obriga Atendimento da RM na Liberação da OP", type text}, {"Controla Grade Mix", type text}, {"Integra com Alvo CRM Top", type text}, {"Envio Pesquisa de Preço", type datetime}, {"Valor Custo Pesquisa OBS", type text}, {"Custo Pesquisa Data", type any}, {"Distruibuição Pesquisa", type text}, {"Natureza de Despesa - BEC", type text}, {"Seq Inventário", Int64.Type}, {"Prioridade", type any}, {"Cod ICMS ST", type any}, {"Classificação ABNT NBR 10.004", type any}, {"Descarte Leilão", type text}, {"Descarte Doação", type text}, {"Descarte Reuso", type text}, {"Descarte Reciclagem", type text}, {"Produto Controlado", type text}, {"Descarte Aterro/Tratamento", type text}, {"Previsível", type text}, {"Recupera IBS UF", type text}, {"Recupera IBS Município", type text}, {"Recupera CBS", type text}, {"Fabricação Escala Relevante", type text}, {"Desconsidera Pesagem", type text}, {"Possui Dimensão na Produção", type text}, {"Habilita Comprimento Produção", type text}, {"Habilita Largura Produção", type text}, {"Habilita Altura (Espessura) Produção", type text}}),
+				    #"Erros Substituídos" = Table.ReplaceErrorValues(#"Tipo Alterado", {{"Alternativo", null}, {"Grupo", null}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Erros Substituídos", each [Alternativo] <> null and [Grupo] <> "Sim")
+				in
+				    #"Linhas Filtradas"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,232 @@
+table RES34_20260824
+	lineageTag: 641fcfa5-2ad9-47ac-8b8a-8bc65558cf0a
+
+	measure 'Valor Total Estoque' =
+			
+			SUM(RES34_20260824[Valor Total])
+		lineageTag: 129b22ae-aaa3-4f1e-83a1-e57e6ca63256
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ranking ABC' =
+			
+			RANKX(
+			    ALLSELECTED(RES34_20260824[Cód. Red.]),
+			    [Valor Total Estoque],
+			    ,
+			    DESC,
+			    DENSE
+			)
+		formatString: 0
+		lineageTag: 81641f47-f95f-4da1-95d3-ecb1895be5d0
+
+	column 'Cód. Estr.'
+		dataType: string
+		lineageTag: 221a3bdd-9319-42db-8c78-c5810bc3f88d
+		summarizeBy: none
+		sourceColumn: Cód. Estr.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód. Red.'
+		dataType: int64
+		formatString: 0
+		lineageTag: a37ba052-2bd1-4701-b44a-e4e27eec3c68
+		summarizeBy: sum
+		sourceColumn: Cód. Red.
+
+		annotation SummarizationSetBy = Automatic
+
+	column UN
+		dataType: string
+		lineageTag: 66c01f11-834f-41a4-85f4-f0beb993cae2
+		summarizeBy: none
+		sourceColumn: UN
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 1f9ee009-c0e0-43b0-89dc-a6fbc53f2642
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 035a9d4f-3554-48f7-9e4d-f7d0fec29da4
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ABNT NBR 10.004'
+		dataType: string
+		lineageTag: 29884343-841d-4d1e-beaa-9108360521a1
+		summarizeBy: none
+		sourceColumn: ABNT NBR 10.004
+
+		annotation SummarizationSetBy = Automatic
+
+	column Leilão
+		dataType: string
+		lineageTag: 50486542-dff9-4722-99a3-1338bf6251c8
+		summarizeBy: none
+		sourceColumn: Leilão
+
+		annotation SummarizationSetBy = Automatic
+
+	column Doação
+		dataType: string
+		lineageTag: 76b10b94-3a89-40d3-82f3-f6954cfaf8be
+		summarizeBy: none
+		sourceColumn: Doação
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reuso
+		dataType: string
+		lineageTag: 9f4d8836-9551-4bf6-8000-21083780ade6
+		summarizeBy: none
+		sourceColumn: Reuso
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reciclagem
+		dataType: string
+		lineageTag: 6e7f8208-c494-4d3f-86bf-5bc848cde543
+		summarizeBy: none
+		sourceColumn: Reciclagem
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Log. Reversa'
+		dataType: string
+		lineageTag: 07634b95-4c60-468f-9ef4-2cd645e88858
+		summarizeBy: none
+		sourceColumn: Log. Reversa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aterro
+		dataType: string
+		lineageTag: ea557d2c-a529-4c8d-9655-7ac88ec747fe
+		summarizeBy: none
+		sourceColumn: Aterro
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ult. Saída'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 711864a6-01cd-4a60-9df0-926b77e2a703
+		summarizeBy: none
+		sourceColumn: Ult. Saída
+
+		variation Variation
+			isDefault
+			relationship: 84c01097-bea7-4a82-bdc0-989179090ceb
+			defaultHierarchy: LocalDateTable_ba79d5d8-9607-4b8a-9d75-47e496d79115.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Ult. Entrada'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c6c31d37-02b5-45c0-866f-c69f783202f7
+		summarizeBy: none
+		sourceColumn: Ult. Entrada
+
+		variation Variation
+			isDefault
+			relationship: c0ac028d-1fb7-4b84-8a6e-65850a90f4d8
+			defaultHierarchy: LocalDateTable_59cdfea5-454a-46c4-9bc8-0d4552063c18.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Local
+		dataType: string
+		lineageTag: 0f7fe9fa-71d4-4b95-980b-6dd4fa34bbba
+		summarizeBy: none
+		sourceColumn: Local
+
+		annotation SummarizationSetBy = Automatic
+
+	column Almoxarifado
+		dataType: string
+		lineageTag: 1235a1f9-a2cd-465d-a0b0-785bc6df9bee
+		summarizeBy: none
+		sourceColumn: Almoxarifado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Saldo Atual'
+		dataType: double
+		lineageTag: 14af2b31-87b2-4385-9a25-1e3f4a435e29
+		summarizeBy: sum
+		sourceColumn: Saldo Atual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Unit'
+		dataType: double
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: ae53f55d-8ae9-4c9d-94a1-370c9d60a996
+		summarizeBy: sum
+		sourceColumn: Valor Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Total'
+		dataType: double
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 2509537b-9d4a-4aef-922a-e3a911f7538a
+		summarizeBy: sum
+		sourceColumn: Valor Total
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reserva Estoque'
+		dataType: double
+		formatString: 0
+		lineageTag: bc5dc8d6-fec0-40af-a6f6-9e608df9bd7d
+		summarizeBy: sum
+		sourceColumn: Reserva Estoque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Saldo Total'
+		dataType: double
+		lineageTag: d1111d9b-9c8f-4151-9294-94f21de7416e
+		summarizeBy: sum
+		sourceColumn: Saldo Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition RES34_20260824 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "4. RES34_20260824.xlsx"), null, true),
+				    #"Page 1_Sheet" = Fonte{[Item="Page 1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Page 1_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Cód. Estr.", type text}, {"Cód. Red.", Int64.Type}, {"UN", type text}, {"Descrição", type text}, {"Status", type text}, {"ABNT NBR 10.004", type any}, {"Leilão", type any}, {"Doação", type any}, {"Reuso", type any}, {"Reciclagem", type any}, {"Log. Reversa", type any}, {"Aterro", type any}, {"Ult. Saída", type date}, {"Ult. Entrada", type date}, {"Local", type text}, {"Almoxarifado", type text}, {"Saldo Atual", type number}, {"Valor Unit", type number}, {"Valor Total", type number}, {"Reserva Estoque", type number}, {"Saldo Total", type number}}),
+				    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Tipo Alterado", {{"Valor Total", type number}}, "pt-BR"),
+				    #"Tipo Alterado com Localidade1" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade", {{"Reserva Estoque", type number}}, "pt-BR"),
+				    #"Tipo Alterado com Localidade2" = Table.TransformColumnTypes(#"Tipo Alterado com Localidade1", {{"Saldo Total", type number}}, "pt-BR")
+				in
+				    #"Tipo Alterado com Localidade2"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

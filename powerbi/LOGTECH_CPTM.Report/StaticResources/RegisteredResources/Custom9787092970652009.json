@@ -1,0 +1,18 @@
+{
+  "name": "Custom",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#12239E"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

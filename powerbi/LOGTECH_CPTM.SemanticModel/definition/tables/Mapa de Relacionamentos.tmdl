@@ -1,0 +1,66 @@
+table 'Mapa de Relacionamentos'
+	lineageTag: 8b495545-7839-435e-bfc1-ad8dcacb95f7
+
+	column Nº
+		lineageTag: 817a7f49-2c0f-43cb-900c-f232bbd896fe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nº]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Base
+		lineageTag: 38b19516-b13b-4a98-8f45-7f7f29c5e114
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Base]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Coluna
+		lineageTag: d51446c0-4ef3-4b67-b168-eae3021d63ff
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Coluna]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Liga com'
+		lineageTag: d71823d1-66b6-4ed2-a25d-683e56e26fd3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Liga com]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observação
+		lineageTag: e3f0257b-3d8f-4584-b689-09bb4127a0da
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Observação]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Mapa de Relacionamentos' = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Nº", INTEGER,
+				    "Base", STRING,
+				    "Coluna", STRING,
+				    "Liga com", STRING,
+				    "Observação", STRING,
+				    {
+				        { 1, "RES34 (obsoletos / saldo por almoxarifado)", "Cód. Red.", "PROD – Alternativo (Código CPTM)", "Chave principal indicada pela CPTM" },
+				        { 2, "RES43 (planejamento de compras)", "CPTM", "PROD – Alternativo (Código CPTM)", "Chave principal" },
+				        { 3, "RES47 (posição do estoque)", "Código Reduzido", "PROD – Alternativo (Código CPTM)", "Chave principal" },
+				        { 4, "RES75 (PCAN / movimentação anual)", "Código CPTM", "PROD – Alternativo (Código CPTM)", "Chave principal" },
+				        { 5, "RES82 (movimentações)", "Cód. Estr. (extraído da coluna Produto)", "PROD – Estruturado", "A RES82 não tem Código CPTM" },
+				        { 6, "8. Movimentações Materiais", "Número", "RES82 – Número RM", "Somente lançamentos com Espécie = RM, conforme orientação da CPTM" },
+				        { 7, "RES82", "Código Movimento", "Tipo de Movimentação – Código", "Classifica cada lançamento como entrada, saída ou neutro" },
+				        { 8, "RES82", "Entrada (data)", "dCalendario – Date", "Permite filtrar por período" },
+				        { 9, "PROD (cadastro de materiais)", "Alternativo", "—", "Removidas 421 linhas de grupo (Grupo = Sim) e 13 sem código, para a chave ficar única" }
+				    }
+				)
+
+	annotation PBI_Id = f89d29f3bba6405aadeb68389762fdbc

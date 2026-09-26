@@ -1,0 +1,35 @@
+table dRotatividade
+	lineageTag: 67dc0105-cb66-4a6d-b770-921bc499aad8
+
+	column Rotatividade
+		lineageTag: cdeb14bb-da0f-486c-b717-d632154009f9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Rotatividade]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		lineageTag: 8e881867-fbe8-49c1-a1bb-e74b4922621e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dRotatividade = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Rotatividade", STRING,
+				    "Ordem", INTEGER,
+				    {
+				        { "Alta (giro ≥ 4)", 1 },
+				        { "Média (giro de 1 a 4)", 2 },
+				        { "Baixa (giro < 1)", 3 },
+				        { "Sem giro (sem consumo)", 4 }
+				    }
+				)
+
+	annotation PBI_Id = 8baa0defdcb443a28eab1312d85904a8

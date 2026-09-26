@@ -1,0 +1,241 @@
+table RES43_20260824
+	lineageTag: 7d31c5f9-626a-46e6-aad1-17acfad75698
+
+	column 'Seq.'
+		dataType: int64
+		formatString: 0
+		lineageTag: f7de1b12-c971-439f-8104-72660fe602c5
+		summarizeBy: sum
+		sourceColumn: Seq.
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPTM
+		dataType: int64
+		formatString: 0
+		lineageTag: 689132ab-f7c8-43b6-9c34-17cde47929b3
+		summarizeBy: none
+		sourceColumn: CPTM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód.Estr.'
+		dataType: string
+		lineageTag: 8dd717da-34aa-46b7-87b6-75d69918365e
+		summarizeBy: none
+		sourceColumn: Cód.Estr.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código BEC'
+		dataType: string
+		lineageTag: ce426529-99ed-41c4-ad0a-153fe7b0d3e6
+		summarizeBy: none
+		sourceColumn: Código BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe BEC'
+		dataType: int64
+		formatString: 0
+		lineageTag: 877efc43-4f3f-41d6-b28e-05df72c01274
+		summarizeBy: sum
+		sourceColumn: Classe BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 2bae7049-336b-401f-9d90-cf89686cc6ac
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro de Controle'
+		dataType: string
+		lineageTag: 3ae2ce01-16b1-4e78-a8d6-0d657db6e080
+		summarizeBy: none
+		sourceColumn: Centro de Controle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saldo
+		dataType: double
+		lineageTag: 15084fc1-19fc-4c15-9fa4-600902b9e192
+		summarizeBy: sum
+		sourceColumn: Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Consumo Médio Mensal'
+		dataType: double
+		lineageTag: 5a9070fa-886d-4fbb-9a74-b1f3a6ca1974
+		summarizeBy: sum
+		sourceColumn: Consumo Médio Mensal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PCA Mensal (fatia)'
+		dataType: double
+		lineageTag: 3c2f6064-59d7-4da6-a88d-2943aa49357e
+		summarizeBy: sum
+		sourceColumn: PCA Mensal (fatia)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Utilização (%)'
+		dataType: double
+		lineageTag: c821be95-82d1-4bf6-b64c-7ece800484d8
+		summarizeBy: sum
+		sourceColumn: Utilização (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Quantidade Necessária p/ Compra'
+		dataType: double
+		lineageTag: 538a6867-8585-4e41-926a-3c026696c74b
+		summarizeBy: sum
+		sourceColumn: Quantidade Necessária p/ Compra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Previsão $'
+		dataType: double
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		lineageTag: 0e0c288f-9855-4c64-808b-7d55f3ba8da9
+		summarizeBy: sum
+		sourceColumn: Previsão $
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	column 'Qtd. Solic.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5dcc5ca2-718a-4532-b5bf-bf8d08fc0885
+		summarizeBy: sum
+		sourceColumn: Qtd. Solic.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prior.'
+		dataType: string
+		lineageTag: bea7f3fa-5e6e-4cb5-ab00-e238944dd320
+		summarizeBy: none
+		sourceColumn: Prior.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtd. Contratada'
+		dataType: int64
+		formatString: 0
+		lineageTag: f4353351-b100-4d80-bf9c-b2f4d1c8eefc
+		summarizeBy: sum
+		sourceColumn: Qtd. Contratada
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RMs Aberta'
+		dataType: int64
+		formatString: 0
+		lineageTag: 60aac4ee-388d-46cc-ab0f-2fabf00858d8
+		summarizeBy: sum
+		sourceColumn: RMs Aberta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SCs Provisórias'
+		dataType: int64
+		formatString: 0
+		lineageTag: 20079843-9287-48a0-bfb3-3d16db478262
+		summarizeBy: sum
+		sourceColumn: SCs Provisórias
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'OFs a Entregar'
+		dataType: int64
+		formatString: 0
+		lineageTag: dd4fd002-93e4-41e8-95d6-2e041ba7eab5
+		summarizeBy: sum
+		sourceColumn: OFs a Entregar
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_consumo
+		dataType: string
+		lineageTag: 66d79a77-0040-4b17-8dab-197a498f3386
+		summarizeBy: none
+		sourceColumn: tipo_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column opcao_relatorio
+		dataType: string
+		lineageTag: 7e88b2e4-ac36-41a4-b798-3c5a2f95738d
+		summarizeBy: none
+		sourceColumn: opcao_relatorio
+
+		annotation SummarizationSetBy = Automatic
+
+	column insuficiente_meses
+		dataType: int64
+		formatString: 0
+		lineageTag: e68189bd-5fd1-48e0-af16-40e99b427d6d
+		summarizeBy: sum
+		sourceColumn: insuficiente_meses
+
+		annotation SummarizationSetBy = Automatic
+
+	column compra_meses
+		dataType: int64
+		formatString: 0
+		lineageTag: 8590ac94-50a1-4ffd-9f75-67e0daa264f8
+		summarizeBy: sum
+		sourceColumn: compra_meses
+
+		annotation SummarizationSetBy = Automatic
+
+	column considera_saldo_calculo
+		dataType: string
+		lineageTag: 1e2d45dc-ea2a-4983-9170-1026cbcdb498
+		summarizeBy: none
+		sourceColumn: considera_saldo_calculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column arquivo_origem
+		dataType: string
+		lineageTag: feb6d87a-38e3-48e1-bc83-47099cb387de
+		summarizeBy: none
+		sourceColumn: arquivo_origem
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RES43_20260824 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "RES43_Base_Consolidada.xlsx"), null, true),
+				    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Seq.", Int64.Type}, {"CPTM", Int64.Type}, {"Cód.Estr.", type text}, {"Código BEC", type text}, {"Classe BEC", Int64.Type}, {"Descrição", type text}, {"Centro de Controle", type text}, {"Saldo", type number}, {"Consumo Médio Mensal", type number}, {"PCA Mensal (fatia)", type number}, {"Utilização (%)", type number}, {"Quantidade Necessária p/ Compra", type number}, {"Previsão $", type number}, {"Qtd. Solic.", Int64.Type}, {"Prior.", type text}, {"Qtd. Contratada", Int64.Type}, {"RMs Aberta", Int64.Type}, {"SCs Provisórias", Int64.Type}, {"OFs a Entregar", Int64.Type}, {"tipo_consumo", type text}, {"opcao_relatorio", type text}, {"insuficiente_meses", Int64.Type}, {"compra_meses", Int64.Type}, {"considera_saldo_calculo", type text}, {"arquivo_origem", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

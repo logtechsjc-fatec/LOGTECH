@@ -1,0 +1,218 @@
+table RES82_20260825
+	lineageTag: 6ef77dec-9c8a-46d0-bd15-1e30a205d0b0
+
+	column Chave
+		dataType: string
+		lineageTag: afcae2f9-9c43-4475-8702-15acd07501ab
+		summarizeBy: none
+		sourceColumn: Chave
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entrada
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ba0de909-eff3-4fd9-b1ef-00c075d1ee53
+		summarizeBy: none
+		sourceColumn: Entrada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entidade
+		dataType: string
+		lineageTag: 918d55a1-4582-46c6-b31b-dc82679f808b
+		summarizeBy: none
+		sourceColumn: Entidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Espécie
+		dataType: string
+		lineageTag: b9229f3e-d88b-4da1-b01f-337752586537
+		summarizeBy: none
+		sourceColumn: Espécie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Número
+		dataType: string
+		lineageTag: 1e677693-b035-43b8-86cf-a9e551460fd8
+		summarizeBy: none
+		sourceColumn: Número
+
+		annotation SummarizationSetBy = Automatic
+
+	column Emissão
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 13cdba55-c9a5-4a2a-9e0c-4d28b4a76b68
+		summarizeBy: none
+		sourceColumn: Emissão
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Lancto.'
+		dataType: string
+		lineageTag: f355c89f-48e2-482a-985b-b81a14f2ab3f
+		summarizeBy: none
+		sourceColumn: Tipo Lancto.
+
+		annotation SummarizationSetBy = Automatic
+
+	column Produto
+		dataType: string
+		lineageTag: 814e6f4c-3594-46eb-bde4-ced1c29cc9c6
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Produto'
+		dataType: string
+		lineageTag: 510e42fb-3aa0-410d-a42f-fcccb99231f7
+		summarizeBy: none
+		sourceColumn: Tipo Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtde.'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a1ba2b2e-89df-4041-bdd0-12b2c1ce9556
+		summarizeBy: sum
+		sourceColumn: Qtde.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Unit.'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 121fba42-a410-4d6b-bb6c-5eb46e5c471b
+		summarizeBy: sum
+		sourceColumn: Valor Unit.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Total'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d91954b8-97f7-47bd-939d-815cb9158962
+		summarizeBy: sum
+		sourceColumn: Valor Total
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Difal ICMS'
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f698b335-96fc-4d23-9abb-4ca64b22cadb
+		summarizeBy: sum
+		sourceColumn: Difal ICMS
+
+		annotation SummarizationSetBy = Automatic
+
+	column IPI
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f9ddae78-667a-41cc-99d7-975916126edf
+		summarizeBy: sum
+		sourceColumn: IPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column Glosa
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 55030768-56e9-4e05-82bd-b3c7ddd9a79c
+		summarizeBy: sum
+		sourceColumn: Glosa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Percentual
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 8b105814-2798-417d-aa93-33708a76020c
+		summarizeBy: sum
+		sourceColumn: Percentual
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 47c1b5de-9fda-4c72-a00b-50419c949986
+		summarizeBy: sum
+		sourceColumn: Valor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complemento
+		dataType: string
+		lineageTag: c6e63ff6-7619-4355-8ba6-42e834c9ed03
+		summarizeBy: none
+		sourceColumn: Complemento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód. Estr.'
+		dataType: string
+		lineageTag: 6a8a954d-6b2c-44af-b9ae-109ab5a9ac8c
+		summarizeBy: none
+		sourceColumn: Cód. Estr.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código Movimento'
+		dataType: string
+		lineageTag: c60a3482-4580-4251-8a4a-c0b008902eea
+		summarizeBy: none
+		sourceColumn: Código Movimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Número RM'
+		dataType: string
+		lineageTag: 8867a712-4c54-408b-bc4e-c507759f1674
+		summarizeBy: none
+		sourceColumn: Número RM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtd Líquida' =
+			RES82_20260825[Qtde.] * SWITCH ( RELATED ( 'Tipo de Movimentação'[Sentido] ), "Entrada", 1, "Saída", -1, 0 )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d4667d2f-ea60-42cf-a7f8-49938f313c15
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Líquido' =
+			RES82_20260825[Valor Total] * SWITCH ( RELATED ( 'Tipo de Movimentação'[Sentido] ), "Entrada", 1, "Somente valor (+)", 1, "Saída", -1, "Somente valor (-)", -1, 0 )
+		dataType: double
+		formatString: #,0.00
+		lineageTag: fb17f8dc-f688-4f4e-a04d-86ebe0fa96d9
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RES82_20260825 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "7. RES82_20260825.xlsx"), null, true),
+				    #"Page 1_Sheet" = Fonte{[Item="Page 1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Page 1_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Texto" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Chave", type text}, {"Entidade", type text}, {"Espécie", type text}, {"Número", type text}, {"Tipo Lancto.", type text}, {"Produto", type text}, {"Tipo Produto", type text}, {"Complemento", type text}}),
+				    #"Tipo Data" = Table.TransformColumnTypes(#"Tipo Texto",{{"Entrada", type date}, {"Emissão", type date}}, "pt-BR"),
+				    #"Tipo Número" = Table.TransformColumnTypes(#"Tipo Data",{{"Qtde.", type number}, {"Valor Unit.", type number}, {"Valor Total", type number}, {"Difal ICMS", type number}, {"IPI", type number}, {"Glosa", type number}, {"Percentual", type number}, {"Valor", type number}}, "pt-BR"),
+				    #"Cód. Estr." = Table.AddColumn(#"Tipo Número", "Cód. Estr.", each Text.Trim(Text.BeforeDelimiter([Produto], " - ")), type text),
+				    #"Código Movimento" = Table.AddColumn(#"Cód. Estr.", "Código Movimento", each Text.Trim(Text.BeforeDelimiter([#"Tipo Lancto."], " - ")), type text),
+				    #"Número RM" = Table.AddColumn(#"Código Movimento", "Número RM", each if [Espécie] = "RM" then [Número] else null, type text)
+				in
+				    #"Número RM"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table

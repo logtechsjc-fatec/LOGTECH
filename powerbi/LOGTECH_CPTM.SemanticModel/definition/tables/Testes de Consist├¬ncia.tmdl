@@ -1,0 +1,48 @@
+table 'Testes de Consistência'
+	lineageTag: f237ebbe-5992-4458-a80f-4ee66ed113fa
+
+	column Nº
+		lineageTag: 884459af-fa7d-40b1-a8af-cc7981318147
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nº]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Teste
+		lineageTag: 544702c1-e262-4c23-9d6b-fdb4bf5eaa32
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Teste]
+		sortByColumn: 'Nº'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Como ler'
+		lineageTag: b458dd73-b714-42b9-87a8-d6d636870c1a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Como ler]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Testes de Consistência' = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Nº", INTEGER,
+				    "Teste", STRING,
+				    "Como ler", STRING,
+				    {
+				        { 1, "Linhas da RES34 sem cadastro na PROD", "Esperado: 0" },
+				        { 2, "Linhas da RES82 sem material na PROD", "Compras diretas de fundo fixo (códigos 5.02), não estocáveis" },
+				        { 3, "Linhas da RES82 com tipo de movimentação sem classificação", "Esperado: 0" },
+				        { 4, "Materiais na RES47 que não estão na RES34", "Diferença entre as duas fotografias do estoque" },
+				        { 5, "Diferença de valor: RES47 − RES34", "Mesma diferença, em R$" },
+				        { 6, "Consumo 2025: RES82 ÷ RES75 (coluna 2025 MOV)", "Perto de 100% confirma a classificação do consumo" },
+				        { 7, "Materiais com saldo negativo ao reconstruir ago/2025", "Indica movimentos fora da RES82 ou a revisar" },
+				        { 8, "RMs da base 8 encontradas na RES82", "Confere a ligação pelo número da movimentação" }
+				    }
+				)
+
+	annotation PBI_Id = 49b0d8d991044d9f931b511d7290b8d9

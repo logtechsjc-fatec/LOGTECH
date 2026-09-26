@@ -1,0 +1,70 @@
+table dCalendario
+	lineageTag: 31ac23c8-5339-4727-9bf3-4b1a6ce506e1
+
+	column Date
+		formatString: Short Date
+		lineageTag: 3bfdcc61-7e38-4401-a1ff-8ea96d8fc258
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		formatString: 0
+		lineageTag: 9917b0f4-62d1-42c9-a13b-342727d51af4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês Num'
+		formatString: 0
+		lineageTag: 444feeba-8dad-4ea8-91bf-08db523a2839
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês Num]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		lineageTag: a9d074ae-0fba-43f7-9fa8-79cae750dabe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês]
+		sortByColumn: 'Ano-Mês'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ano-Mês'
+		formatString: 0
+		lineageTag: cfd95b99-9970-4336-b22e-f0ef7ce1e627
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano-Mês]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês do Ano'
+		lineageTag: 7089fce3-ee88-42a9-a08a-2078efc21464
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mês do Ano]
+		sortByColumn: 'Mês Num'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCalendario = calculated
+		mode: import
+		source =
+				ADDCOLUMNS (
+				    CALENDAR ( DATE ( 2021, 1, 1 ), DATE ( 2026, 12, 31 ) ),
+				    "Ano", YEAR ( [Date] ),
+				    "Mês Num", MONTH ( [Date] ),
+				    "Mês", FORMAT ( [Date], "mmm/yy" ),
+				    "Ano-Mês", YEAR ( [Date] ) * 100 + MONTH ( [Date] ),
+				    "Mês do Ano", FORMAT ( [Date], "mmm" )
+				)
+
+	annotation PBI_Id = ba6256d5557140ca905b85f35a31d2e1

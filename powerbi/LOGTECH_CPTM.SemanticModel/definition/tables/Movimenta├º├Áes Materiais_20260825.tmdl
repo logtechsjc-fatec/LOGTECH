@@ -1,0 +1,162 @@
+table 'Movimentações Materiais_20260825'
+	lineageTag: e6b129e9-3d71-4911-a47e-c75d15988c99
+
+	column Número
+		dataType: string
+		lineageTag: 405a2d3f-e014-4293-8363-50fbf0a1456b
+		summarizeBy: none
+		sourceColumn: Número
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 322deb21-6a8b-490a-b286-4488e53e2e36
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Local de Armazenagem'
+		dataType: string
+		lineageTag: 5d5446bc-3228-44f2-bfa8-e985aef40bea
+		summarizeBy: none
+		sourceColumn: Local de Armazenagem
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro de Controle'
+		dataType: string
+		lineageTag: 79469ec0-597d-4220-a9b3-41e00037a911
+		summarizeBy: none
+		sourceColumn: Centro de Controle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Aprovação'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9fc3469d-65a6-45ac-99ff-2b02718ed42b
+		summarizeBy: none
+		sourceColumn: Data Aprovação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Entrega'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2827b618-edea-4a1a-8df8-c25a51ad8825
+		summarizeBy: none
+		sourceColumn: Data Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Funcionário Entregou'
+		dataType: string
+		lineageTag: a27b5955-460a-468e-9411-f4f59b2f9858
+		summarizeBy: none
+		sourceColumn: Funcionário Entregou
+
+		annotation SummarizationSetBy = Automatic
+
+	column Funcionário
+		dataType: string
+		lineageTag: 2c5db3b8-7c40-4179-a1cd-f4332f37380c
+		summarizeBy: none
+		sourceColumn: Funcionário
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Conferência'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 29078185-755c-4d6c-bb83-824fab0fa057
+		summarizeBy: none
+		sourceColumn: Data Conferência
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Separação'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 32d09df9-1e29-4534-81c6-088e4a2995c2
+		summarizeBy: none
+		sourceColumn: Data Separação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Funcionário Separação'
+		dataType: string
+		lineageTag: 0e826c98-c61a-4c04-84a7-ad32cfa6fb86
+		summarizeBy: none
+		sourceColumn: Funcionário Separação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Fim Separação'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 946adab4-4209-492a-8e8f-d73645cd99db
+		summarizeBy: none
+		sourceColumn: Data Fim Separação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Início Separação'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b66a536d-f281-49f3-8176-626e9c0613f2
+		summarizeBy: none
+		sourceColumn: Data Início Separação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Funcionário Retirou'
+		dataType: string
+		lineageTag: d803707a-6935-489a-806e-6376e0d5d7d7
+		summarizeBy: none
+		sourceColumn: Funcionário Retirou
+
+		annotation SummarizationSetBy = Automatic
+
+	column Equipamento
+		dataType: string
+		lineageTag: 89e4f452-4ba1-46a1-982e-a23b16f566bb
+		summarizeBy: none
+		sourceColumn: Equipamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d98c65ee-1bd9-40f4-9640-c462416fe47d
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sucata
+		dataType: string
+		lineageTag: 0104bb8b-3933-4271-96f1-5cdc64ad6715
+		summarizeBy: none
+		sourceColumn: Sucata
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Movimentações Materiais_20260825' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "8. Movimentações Materiais_20260825.xlsx"), null, true),
+				    #"Page 1_Sheet" = Fonte{[Item="Page 1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Page 1_Sheet", [PromoteAllScalars=true]),
+				    #"Texto Limpo" = Table.TransformColumns(#"Cabeçalhos Promovidos", List.Transform(Table.ColumnNames(#"Cabeçalhos Promovidos"), each {_, (x) => if x is text then (if Text.Trim(Text.Clean(x)) = "" then null else Text.Trim(Text.Clean(x))) else x})),
+				    #"Tipo Texto" = Table.TransformColumnTypes(#"Texto Limpo",{{"Número", type text}, {"Descrição", type text}, {"Local de Armazenagem", type text}, {"Centro de Controle", type text}, {"Funcionário Entregou", type text}, {"Funcionário", type text}, {"Funcionário Separação", type text}, {"Funcionário Retirou", type text}, {"Equipamento", type text}, {"Sucata", type text}}),
+				    #"Tipo Data" = Table.TransformColumnTypes(#"Tipo Texto",{{"Data Aprovação", type datetime}, {"Data Entrega", type datetime}, {"Data Conferência", type datetime}, {"Data Separação", type datetime}, {"Data Fim Separação", type datetime}, {"Data Início Separação", type datetime}, {"Data", type datetime}}, "pt-BR")
+				in
+				    #"Tipo Data"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table

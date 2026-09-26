@@ -1,0 +1,36 @@
+table dEtapa
+	lineageTag: 686ccf24-cf2e-4655-b580-ad45ef257c6b
+
+	column Etapa
+		lineageTag: 4bcac6ab-941b-4ea7-9693-467604cee008
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Etapa]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		lineageTag: 4bca66dc-a45a-4e70-b964-38742d757caa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dEtapa = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Etapa", STRING,
+				    "Ordem", INTEGER,
+				    {
+				        { "1. Necessidade de compra", 1 },
+				        { "2. RM aberta", 2 },
+				        { "3. SC provisória", 3 },
+				        { "4. Em contratação", 4 },
+				        { "5. OF a entregar", 5 }
+				    }
+				)
+
+	annotation PBI_Id = 0aec3dcbc5e744d197c9f2f6c0978ff1

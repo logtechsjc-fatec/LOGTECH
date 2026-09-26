@@ -1,0 +1,363 @@
+table RES75_20260824
+	lineageTag: 1b0112e2-9b82-4bce-89dd-d942172da2fe
+
+	column PCAN
+		dataType: string
+		lineageTag: c6d3ee56-4f63-49ac-b091-33445165e68d
+		summarizeBy: none
+		sourceColumn: PCAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro de Controle'
+		dataType: int64
+		formatString: 0
+		lineageTag: 50510adf-1b3d-48b0-817c-231c62b47309
+		summarizeBy: sum
+		sourceColumn: Centro de Controle
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Produto Estruturado'
+		dataType: string
+		lineageTag: 5caaa9c6-3314-42a3-b336-51593c7dcfd2
+		summarizeBy: none
+		sourceColumn: Produto Estruturado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código CPTM'
+		dataType: int64
+		formatString: 0
+		lineageTag: 03b07cbd-ff32-4dae-b3c1-15066cc0fd7a
+		summarizeBy: sum
+		sourceColumn: Código CPTM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código BEC'
+		dataType: string
+		lineageTag: 9079e3f4-9930-4fff-a287-ad83c1922283
+		summarizeBy: none
+		sourceColumn: Código BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 4f720853-5a93-4368-ac3d-8a1112a4dfea
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unid. Medida Principal'
+		dataType: string
+		lineageTag: a8175aa2-957e-4232-939a-5a2c13c98ed1
+		summarizeBy: none
+		sourceColumn: Unid. Medida Principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Consumo'
+		dataType: string
+		lineageTag: 108441d4-ad18-46d3-a609-47db67b27fca
+		summarizeBy: none
+		sourceColumn: Tipo Consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Utilização
+		dataType: string
+		lineageTag: 39e25120-e796-4f42-9aa1-cc3457d53ffd
+		summarizeBy: none
+		sourceColumn: Utilização
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 4850b073-5aad-4d23-924d-1dc450092e68
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Espeficicação Técnica'
+		dataType: string
+		lineageTag: 7389194a-5a48-4a14-973b-f899e99b39c4
+		summarizeBy: none
+		sourceColumn: Espeficicação Técnica
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtde PCAN'
+		dataType: int64
+		formatString: 0
+		lineageTag: 68532e93-1312-4e09-b8ce-3a6f56053d75
+		summarizeBy: sum
+		sourceColumn: Qtde PCAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtde PCAN Reestruturação'
+		dataType: int64
+		formatString: 0
+		lineageTag: 17f6efaf-8fa0-4cf2-9cb9-367c7ab6945e
+		summarizeBy: sum
+		sourceColumn: Qtde PCAN Reestruturação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtde Estoque'
+		dataType: int64
+		formatString: 0
+		lineageTag: deb39c8a-ef62-4d45-925d-c43ba0c85bf5
+		summarizeBy: sum
+		sourceColumn: Qtde Estoque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dias Estoque Zerado'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c344cc4-c68e-4d52-b96e-39bb1f5184fe
+		summarizeBy: sum
+		sourceColumn: Dias Estoque Zerado
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2014 MOV'
+		dataType: string
+		lineageTag: d464e7b6-20be-4cdf-a530-8b10bf8ab0b8
+		summarizeBy: none
+		sourceColumn: 2014 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2014 PCA'
+		dataType: string
+		lineageTag: 89c5d9ae-8071-4b08-af97-294f69520e73
+		summarizeBy: none
+		sourceColumn: 2014 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2015 MOV'
+		dataType: string
+		lineageTag: 54bd5701-ab74-4647-8391-70c82443d010
+		summarizeBy: none
+		sourceColumn: 2015 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2015 PCA'
+		dataType: string
+		lineageTag: 80098a7e-a80f-4fcd-9eca-cf7aebfcd778
+		summarizeBy: none
+		sourceColumn: 2015 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2016 MOV'
+		dataType: string
+		lineageTag: d08c038d-00bf-404a-86f5-d6947bfd87a7
+		summarizeBy: none
+		sourceColumn: 2016 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2016 PCA'
+		dataType: string
+		lineageTag: 1aeeddb3-9676-4b93-9e35-256c8724e234
+		summarizeBy: none
+		sourceColumn: 2016 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2017 MOV'
+		dataType: string
+		lineageTag: ce71d163-6ac9-4692-a157-5e2f9dbb57b4
+		summarizeBy: none
+		sourceColumn: 2017 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2017 PCA'
+		dataType: string
+		lineageTag: 8741d94c-fbe3-4614-ac49-d04274bdcf39
+		summarizeBy: none
+		sourceColumn: 2017 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2018 MOV'
+		dataType: string
+		lineageTag: 924ca62c-4bd5-43cc-b8f9-a2bf38e947dc
+		summarizeBy: none
+		sourceColumn: 2018 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2018 PCA'
+		dataType: string
+		lineageTag: 3c9024ca-496a-4c80-9c80-ef3d197b220e
+		summarizeBy: none
+		sourceColumn: 2018 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2019 MOV'
+		dataType: string
+		lineageTag: 184fa87d-6a68-44c5-a35b-d551c3260e4d
+		summarizeBy: none
+		sourceColumn: 2019 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2019 PCA'
+		dataType: string
+		lineageTag: f8a93aee-4144-4f3f-a697-f98e3a8c2598
+		summarizeBy: none
+		sourceColumn: 2019 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2020 MOV'
+		dataType: string
+		lineageTag: 1e650d48-eb0a-4281-a481-4ce2dd8021bf
+		summarizeBy: none
+		sourceColumn: 2020 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2020 PCA'
+		dataType: string
+		lineageTag: 9e7d3259-bffe-4a56-a8ab-d54f3ee70c86
+		summarizeBy: none
+		sourceColumn: 2020 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2021 MOV'
+		dataType: string
+		lineageTag: b9467529-e431-4bf3-b069-5549a45abcd8
+		summarizeBy: none
+		sourceColumn: 2021 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2021 PCA'
+		dataType: string
+		lineageTag: 07da8415-966e-43c1-8b16-ff508bbfd65a
+		summarizeBy: none
+		sourceColumn: 2021 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2022 MOV'
+		dataType: string
+		lineageTag: fe629dba-7b5a-41c7-ac1f-07a6c5592069
+		summarizeBy: none
+		sourceColumn: 2022 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2022 PCA'
+		dataType: string
+		lineageTag: 9eba3225-6cea-4553-a618-ea88c45f25ef
+		summarizeBy: none
+		sourceColumn: 2022 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2023 MOV'
+		dataType: string
+		lineageTag: 2cbcc571-c41c-471f-a67e-a879880b35a9
+		summarizeBy: none
+		sourceColumn: 2023 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2023 PCA'
+		dataType: string
+		lineageTag: d29d7d0d-887c-4e02-93ad-c35947612f62
+		summarizeBy: none
+		sourceColumn: 2023 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2024 MOV'
+		dataType: string
+		lineageTag: 07a5524f-1a51-4b55-b877-7b7519c16f23
+		summarizeBy: none
+		sourceColumn: 2024 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2024 PCA'
+		dataType: string
+		lineageTag: cb1d0e97-dff5-4301-be27-7a7d43c1cb10
+		summarizeBy: none
+		sourceColumn: 2024 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2025 MOV'
+		dataType: string
+		lineageTag: 75478bb7-7e8d-44d7-8db1-61906145e03b
+		summarizeBy: none
+		sourceColumn: 2025 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2025 PCA'
+		dataType: string
+		lineageTag: d2d21ae3-13c6-4905-ab01-55b94a174a94
+		summarizeBy: none
+		sourceColumn: 2025 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2026 MOV'
+		dataType: string
+		lineageTag: d4fb23d6-26eb-4d56-aca1-171d8cd0797f
+		summarizeBy: none
+		sourceColumn: 2026 MOV
+
+		annotation SummarizationSetBy = Automatic
+
+	column '2026 PCA'
+		dataType: string
+		lineageTag: b8f4ac56-b724-416f-9e72-2cd62169ad03
+		summarizeBy: none
+		sourceColumn: 2026 PCA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consumo 2025'
+		dataType: double
+		lineageTag: 3fc94229-f92f-4f0a-87c5-4aec26a10ad9
+		summarizeBy: sum
+		sourceColumn: Consumo 2025
+
+		annotation SummarizationSetBy = Automatic
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition RES75_20260824 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "6. RES75_20260824.xlsx"), null, true),
+				    #"Page 1_Sheet" = Fonte{[Item="Page 1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Page 1_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"PCAN", type any}, {"Centro de Controle", Int64.Type}, {"Produto Estruturado", type text}, {"Código CPTM", Int64.Type}, {"Código BEC", type text}, {"Descrição", type text}, {"Unid. Medida Principal", type text}, {"Tipo Consumo", type text}, {"Utilização", type text}, {"Status", type text}, {"Espeficicação Técnica", type text}, {"Qtde PCAN", Int64.Type}, {"Qtde PCAN Reestruturação", Int64.Type}, {"Qtde Estoque", Int64.Type}, {"Dias Estoque Zerado", Int64.Type}, {"2014 MOV", type any}, {"2014 PCA", type text}, {"2015 MOV", type any}, {"2015 PCA", type text}, {"2016 MOV", type any}, {"2016 PCA", type text}, {"2017 MOV", type any}, {"2017 PCA", type text}, {"2018 MOV", type any}, {"2018 PCA", type text}, {"2019 MOV", type any}, {"2019 PCA", type text}, {"2020 MOV", type any}, {"2020 PCA", type text}, {"2021 MOV", type any}, {"2021 PCA", type text}, {"2022 MOV", type any}, {"2022 PCA", type text}, {"2023 MOV", type any}, {"2023 PCA", type text}, {"2024 MOV", type any}, {"2024 PCA", type text}, {"2025 MOV", type text}, {"2025 PCA", type text}, {"2026 MOV", type text}, {"2026 PCA", type text}}),
+				    #"Linhas Superiores Removidas" = Table.Skip(#"Tipo Alterado",1),
+				    #"Consumo 2025" = Table.AddColumn(#"Linhas Superiores Removidas", "Consumo 2025", each try Number.From([#"2025 MOV"], "pt-BR") otherwise null, type number)
+				in
+				    #"Consumo 2025"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

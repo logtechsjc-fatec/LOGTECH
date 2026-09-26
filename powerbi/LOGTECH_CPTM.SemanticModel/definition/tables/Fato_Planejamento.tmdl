@@ -1,0 +1,238 @@
+table Fato_Planejamento
+	lineageTag: fa9dbfd4-813c-4a27-953c-57a0fdc6c454
+
+	column 'Seq.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e6d402b-6740-4753-9df4-5d19dfd8fed0
+		summarizeBy: none
+		sourceColumn: Seq.
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPTM
+		dataType: int64
+		formatString: 0
+		lineageTag: 84dd640c-881c-40dd-9439-629760487ac9
+		summarizeBy: none
+		sourceColumn: CPTM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cód.Estr.'
+		dataType: string
+		lineageTag: 87df865c-324a-40b4-a6a3-22ae2db0f757
+		summarizeBy: none
+		sourceColumn: Cód.Estr.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código BEC'
+		dataType: string
+		lineageTag: 012e4d50-f276-4517-999b-2d8be0c6731b
+		summarizeBy: none
+		sourceColumn: Código BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe BEC'
+		dataType: int64
+		formatString: 0
+		lineageTag: 423a4e64-2c9f-4e1d-b4c3-0b98b0da714d
+		summarizeBy: none
+		sourceColumn: Classe BEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 11c56673-6907-423e-82dd-6330bad375e7
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Centro de Controle'
+		dataType: string
+		lineageTag: a37256a3-5676-4798-96ee-dfe22a972a5e
+		summarizeBy: none
+		sourceColumn: Centro de Controle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saldo
+		dataType: double
+		lineageTag: 3d09aedc-a31b-463e-8aed-9878ab2170e6
+		summarizeBy: none
+		sourceColumn: Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Consumo Médio Mensal'
+		dataType: double
+		lineageTag: ce9dbbeb-0243-43a0-84a2-e0f2ac39d524
+		summarizeBy: none
+		sourceColumn: Consumo Médio Mensal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'PCA Mensal (fatia)'
+		dataType: double
+		lineageTag: 708a4592-ac10-4607-8fae-944cbeb630aa
+		summarizeBy: none
+		sourceColumn: PCA Mensal (fatia)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Utilização (%)'
+		dataType: double
+		lineageTag: a89f6bbb-edfa-48e9-8524-e9b46869665b
+		summarizeBy: none
+		sourceColumn: Utilização (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Quantidade Necessária p/ Compra'
+		dataType: double
+		lineageTag: 742c96e1-e857-45fe-b5f7-80704490fb75
+		summarizeBy: none
+		sourceColumn: Quantidade Necessária p/ Compra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Previsão $'
+		dataType: double
+		lineageTag: d118bf05-db52-412f-9074-2a8fb4b9cfc3
+		summarizeBy: none
+		sourceColumn: Previsão $
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Qtd. Solic.'
+		dataType: int64
+		formatString: 0
+		lineageTag: 638e23e0-bb71-4989-951a-0349a59f54a3
+		summarizeBy: none
+		sourceColumn: Qtd. Solic.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prior.'
+		dataType: string
+		lineageTag: 10cf38a9-9e4b-4874-b808-a80d5a235899
+		summarizeBy: none
+		sourceColumn: Prior.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Qtd. Contratada'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bda4f02-a0bf-4973-ba6a-23f9ad760996
+		summarizeBy: none
+		sourceColumn: Qtd. Contratada
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'RMs Aberta'
+		dataType: int64
+		formatString: 0
+		lineageTag: d345788d-f72b-447e-a023-0ef6898f2e61
+		summarizeBy: none
+		sourceColumn: RMs Aberta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SCs Provisórias'
+		dataType: int64
+		formatString: 0
+		lineageTag: 461b7dbf-312e-441b-96ca-e7ba7b4833e9
+		summarizeBy: none
+		sourceColumn: SCs Provisórias
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'OFs a Entregar'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2103d0ef-f4f0-4af8-8e74-042547a91e7c
+		summarizeBy: none
+		sourceColumn: OFs a Entregar
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_consumo
+		dataType: string
+		lineageTag: 4498b5ae-1c91-4f85-b561-82925a00c9f6
+		summarizeBy: none
+		sourceColumn: tipo_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column opcao_relatorio
+		dataType: string
+		lineageTag: 807e9974-0ece-4696-bb12-a7cafbee2655
+		summarizeBy: none
+		sourceColumn: opcao_relatorio
+
+		annotation SummarizationSetBy = Automatic
+
+	column insuficiente_meses
+		dataType: int64
+		formatString: 0
+		lineageTag: a761460f-ebb2-46fb-8851-1ec15eb2abd8
+		summarizeBy: none
+		sourceColumn: insuficiente_meses
+
+		annotation SummarizationSetBy = Automatic
+
+	column compra_meses
+		dataType: int64
+		formatString: 0
+		lineageTag: f6fe86f0-e985-46d3-ae50-9d7fc659b412
+		summarizeBy: none
+		sourceColumn: compra_meses
+
+		annotation SummarizationSetBy = Automatic
+
+	column considera_saldo_calculo
+		dataType: string
+		lineageTag: 0c8ae407-9fcc-45fb-92a4-fd57030520a8
+		summarizeBy: none
+		sourceColumn: considera_saldo_calculo
+
+		annotation SummarizationSetBy = Automatic
+
+	column arquivo_origem
+		dataType: string
+		lineageTag: e6f1e45e-7e35-4e76-ba68-971706cabd45
+		summarizeBy: none
+		sourceColumn: arquivo_origem
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fato_Planejamento = m
+		mode: import
+		source =
+				let
+				    Fonte = RES43_20260824,
+				    #"Duplicatas Removidas" = Table.Distinct(Fonte, {"CPTM"})
+				in
+				    #"Duplicatas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

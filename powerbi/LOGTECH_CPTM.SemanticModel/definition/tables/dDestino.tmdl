@@ -1,0 +1,38 @@
+table dDestino
+	lineageTag: 9ed29100-61a0-444a-9fbd-950b8d195946
+
+	column Destinação
+		lineageTag: be32342f-4a3d-496e-8cf8-c46a7c7e90bc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Destinação]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		lineageTag: 491b2bb9-6837-432f-812f-f6ecdd64b93d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dDestino = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Destinação", STRING,
+				    "Ordem", INTEGER,
+				    {
+				        { "Leilão", 1 },
+				        { "Doação", 2 },
+				        { "Reuso", 3 },
+				        { "Reciclagem", 4 },
+				        { "Log. Reversa", 5 },
+				        { "Aterro", 6 },
+				        { "Sem destinação", 7 }
+				    }
+				)
+
+	annotation PBI_Id = 98d736c7f1324efeba640c00bc938c36

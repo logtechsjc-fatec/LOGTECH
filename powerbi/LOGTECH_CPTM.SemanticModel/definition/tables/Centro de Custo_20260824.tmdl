@@ -1,0 +1,87 @@
+table 'Centro de Custo_20260824'
+	lineageTag: d24781e3-d47f-4074-8794-618ca544976f
+
+	column Código
+		dataType: int64
+		formatString: 0
+		lineageTag: cfb95db5-66ea-472f-a3a8-094bd6dc3176
+		summarizeBy: sum
+		sourceColumn: Código
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nome
+		dataType: string
+		lineageTag: 193acd4b-bc77-4174-9234-81aec62931a7
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sigla
+		dataType: string
+		lineageTag: b92ecf52-1a4f-40c9-8b66-2779f3c9f892
+		summarizeBy: none
+		sourceColumn: Sigla
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: f5fd5652-f034-41ba-b633-c7b6bf61127b
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inicial
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 01f4181b-a622-493e-9116-17e0238a00bb
+		summarizeBy: none
+		sourceColumn: Inicial
+
+		variation Variation
+			isDefault
+			relationship: ee547271-bc8c-4cce-8aee-d97dc5be6bf8
+			defaultHierarchy: LocalDateTable_b6105cf4-171e-4de4-a391-bb60898972ee.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Final
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bb78261d-60bb-4e46-b00f-812477391bec
+		summarizeBy: none
+		sourceColumn: Final
+
+		variation Variation
+			isDefault
+			relationship: 5735996f-bd34-4f10-8bf5-bf9ec6eace4c
+			defaultHierarchy: LocalDateTable_3453a8ba-f0bc-4b68-a0e2-e7e24627a86d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linha
+		dataType: string
+		lineageTag: e8706cce-3979-4729-9de8-e2edc0f009c2
+		summarizeBy: none
+		sourceColumn: Linha
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Centro de Custo_20260824' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "3. Centro de Custo_20260824.xlsx"), null, true),
+				    #"Centro de Custo_Sheet" = Fonte{[Item="Centro de Custo",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Centro de Custo_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Código", Int64.Type}, {"Nome", type text}, {"Sigla", type text}, {"Tipo", type text}, {"Inicial", type datetime}, {"Final", type datetime}, {"Linha", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

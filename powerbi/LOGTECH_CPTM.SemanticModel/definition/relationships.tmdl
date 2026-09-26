@@ -1,0 +1,71 @@
+relationship 50a40f2b-6cb1-4356-805e-c6aa69399497
+	joinOnDateBehavior: datePartOnly
+	fromColumn: PROD__20260824.'Envio Pesquisa de Preço'
+	toColumn: LocalDateTable_db5c79a1-4f3e-44c0-8558-16fe91f45dea.Date
+
+relationship ee547271-bc8c-4cce-8aee-d97dc5be6bf8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Centro de Custo_20260824'.Inicial
+	toColumn: LocalDateTable_b6105cf4-171e-4de4-a391-bb60898972ee.Date
+
+relationship 5735996f-bd34-4f10-8bf5-bf9ec6eace4c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Centro de Custo_20260824'.Final
+	toColumn: LocalDateTable_3453a8ba-f0bc-4b68-a0e2-e7e24627a86d.Date
+
+relationship 84c01097-bea7-4a82-bdc0-989179090ceb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RES34_20260824.'Ult. Saída'
+	toColumn: LocalDateTable_ba79d5d8-9607-4b8a-9d75-47e496d79115.Date
+
+relationship c0ac028d-1fb7-4b84-8a6e-65850a90f4d8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RES34_20260824.'Ult. Entrada'
+	toColumn: LocalDateTable_59cdfea5-454a-46c4-9bc8-0d4552063c18.Date
+
+relationship c5d7ff42-0bee-445f-9af6-7a0c3a9c189f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RES47_20260824.'Última Movimentação'
+	toColumn: LocalDateTable_5f3756ee-82ef-4264-bbd0-a772902e2b10.Date
+
+relationship bd81b5f6-b1e7-4e54-a068-c99b571a1a36
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RES47_20260824.'Último Consumo'
+	toColumn: LocalDateTable_e2c118ca-dabf-48df-8012-dceb27a65343.Date
+
+relationship AutoDetected_1b97ee62-9bbc-44b4-8853-c21f02632d10
+	fromColumn: RES43_20260824.CPTM
+	toColumn: Fato_Planejamento.CPTM
+
+
+relationship 7571babf-265a-40a8-9f93-33e23560d9a1
+	fromColumn: RES34_20260824.'Cód. Red.'
+	toColumn: PROD__20260824.Alternativo
+
+relationship 1b3311be-d2d8-4407-911a-814e79a48f9e
+	fromColumn: RES43_20260824.CPTM
+	toColumn: PROD__20260824.Alternativo
+
+relationship 2a8b3dcb-87ba-4017-acbc-3717ccb6424e
+	fromColumn: RES47_20260824.'Código Reduzido'
+	toColumn: PROD__20260824.Alternativo
+
+relationship 98770241-2dad-4365-9d4d-51ff8d90197f
+	fromColumn: RES75_20260824.'Código CPTM'
+	toColumn: PROD__20260824.Alternativo
+
+relationship 6e7a1951-a131-4151-ad8d-7903ee5b79e1
+	fromColumn: RES82_20260825.'Cód. Estr.'
+	toColumn: PROD__20260824.Estruturado
+
+relationship b9c777be-a72c-4f86-a587-7158bfa99c13
+	fromColumn: RES82_20260825.'Código Movimento'
+	toColumn: 'Tipo de Movimentação'.Código
+
+relationship 6523d645-5e33-4ce4-8a34-1bce763f8d98
+	fromColumn: RES82_20260825.Entrada
+	toColumn: dCalendario.Date
+
+relationship e5d36e78-b6a2-4e3b-85d9-b4e3590e221b
+	fromColumn: RES82_20260825.'Número RM'
+	toColumn: 'Movimentações Materiais_20260825'.Número

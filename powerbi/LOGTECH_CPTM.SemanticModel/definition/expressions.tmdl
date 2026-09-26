@@ -1,0 +1,5 @@
+expression PastaDados = "C:\Users\Aline\Desktop\CPTM\ERP ALVO\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 20787dfc-9100-47a3-9338-44b3257d440f
+
+	annotation PBI_ResultType = Text
+

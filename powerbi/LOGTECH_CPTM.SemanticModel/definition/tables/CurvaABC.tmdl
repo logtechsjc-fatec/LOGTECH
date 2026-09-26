@@ -1,0 +1,99 @@
+table CurvaABC
+	lineageTag: ba7cfa56-68c1-4206-a960-0f56bce26807
+
+	column 'Cód. Estr.'
+		lineageTag: 79f656ea-a474-4b4f-b508-a6d7d69cdafa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: RES34_20260824[Cód. Estr.]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValorTotalMaterial
+		lineageTag: 993f4239-9f39-4015-9cbc-cfff82baf767
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ValorTotalMaterial]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Rank
+		formatString: 0
+		lineageTag: ac3871fd-3d7e-4a85-a9e9-a48508457a60
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Rank]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValorAcumulado
+		lineageTag: 64e03d32-1884-4923-a679-21e158660b11
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ValorAcumulado]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PercentualAcumulado
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 59ebcd9c-3793-4b8c-8b32-08f21d6edbbd
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [PercentualAcumulado]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Classe ABC'
+		lineageTag: 25e17b33-8438-4e0c-8e56-fa0f8df181d0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Classe ABC]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CurvaABC = calculated
+		mode: import
+		source =
+				
+				VAR MateriaisUnicos =
+				    VALUES ( RES34_20260824[Cód. Estr.] )
+				VAR ValorPorMaterial =
+				    ADDCOLUMNS (
+				        MateriaisUnicos,
+				        "ValorTotalMaterial", CALCULATE ( SUM ( RES34_20260824[Valor Total] ) )
+				    )
+				VAR ValorGeral =
+				    SUMX ( ValorPorMaterial, [ValorTotalMaterial] )
+				VAR ComRank =
+				    ADDCOLUMNS (
+				        ValorPorMaterial,
+				        "Rank", RANKX ( ValorPorMaterial, [ValorTotalMaterial], , DESC, DENSE )
+				    )
+				VAR ComAcumulado =
+				    ADDCOLUMNS (
+				        ComRank,
+				        "ValorAcumulado",
+				            VAR RankAtual = [Rank]
+				            RETURN
+				                SUMX ( FILTER ( ComRank, [Rank] <= RankAtual ), [ValorTotalMaterial] )
+				    )
+				VAR Resultado =
+				    ADDCOLUMNS (
+				        ComAcumulado,
+				        "PercentualAcumulado", DIVIDE ( [ValorAcumulado], ValorGeral ),
+				        "Classe ABC",
+				            SWITCH (
+				                TRUE (),
+				                DIVIDE ( [ValorAcumulado], ValorGeral ) <= 0.8, "A",
+				                DIVIDE ( [ValorAcumulado], ValorGeral ) <= 0.95, "B",
+				                "C"
+				            )
+				    )
+				RETURN Resultado
+
+	annotation PBI_Id = 426c68015344487997328d063ed01268
+

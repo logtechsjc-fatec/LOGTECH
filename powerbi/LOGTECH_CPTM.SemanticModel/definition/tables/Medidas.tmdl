@@ -1,0 +1,1011 @@
+table Medidas
+	lineageTag: 6567656f-7f54-4af6-aa34-394243ac4920
+
+	measure 'Estoque Total' = SUM(RES34_20260824[Saldo Atual])
+		formatString: #,0
+		displayFolder: Visão de Estoque
+		lineageTag: b37d2d29-d347-4c9a-8bd0-1a99dae4f488
+
+	measure 'Consumo Médio Mensal' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Consumo Médio Mensal] ) ) )
+		displayFolder: Reposição
+		lineageTag: d9bbac98-6f71-42b0-9dd5-0774fce714c4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'PCA Mensal' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[PCA Mensal (fatia)] ) ) )
+		displayFolder: Reposição
+		lineageTag: 1d0cae70-9d4a-495f-89c9-9103caa72e0b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'RMs Abertas' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[RMs Aberta] ) ) )
+		formatString: 0
+		displayFolder: Reposição
+		lineageTag: 290f9521-52c1-4499-8936-7a2f292bfce4
+
+	measure 'Quantidade Necessária p/ Compra' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Quantidade Necessária p/ Compra] ) ) )
+		displayFolder: Reposição
+		lineageTag: b0e203e5-1d10-4f02-96c4-add76c4b9859
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valor Total Compra' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Previsão $] ) ) )
+		displayFolder: Reposição
+		lineageTag: 2c759dd5-1363-4430-bddb-75ab96041950
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Contratações em Andamento' = ```
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Qtd. Contratada] ) ) )
+			
+			```
+		formatString: 0
+		displayFolder: Reposição
+		lineageTag: 8ece31a2-b919-460a-ad13-4c72e6abd980
+
+	measure 'OFs a Entregar' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[OFs a Entregar] ) ) )
+		formatString: 0
+		displayFolder: Reposição
+		lineageTag: 470fbeae-26a5-4f0b-83b8-f468ca0e1aff
+
+	measure 'SCs Provisórias' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[SCs Provisórias] ) ) )
+		formatString: 0
+		displayFolder: Reposição
+		lineageTag: 59845854-d709-4566-b42b-953d74ec1708
+
+	measure 'Saldo Total (para Cobertura)' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Saldo] ) ) )
+		displayFolder: Reposição
+		lineageTag: 65644e76-c241-4e4d-b120-c5850d5ded6c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Consumo Total (para Cobertura)' =
+			
+			SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Consumo Médio Mensal] ) ) )
+		displayFolder: Reposição
+		lineageTag: d6be83e1-27d1-46dd-8754-6467af22415a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cobertura (meses)' =
+			
+			DIVIDE ( [Saldo Total (para Cobertura)], [Consumo Total (para Cobertura)] )
+		displayFolder: Reposição
+		lineageTag: 94b53834-865d-42ee-9baa-3483713c66e4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cobertura por Material' = ```
+			
+			DIVIDE ( 
+			    CALCULATE ( MAX ( RES43_20260824[Saldo] ) ), 
+			    CALCULATE ( MAX ( RES43_20260824[Consumo Médio Mensal] ) ) 
+			)
+			```
+		displayFolder: Reposição
+		lineageTag: 5b1f82ed-990f-4197-9946-21bee38bec1d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valor Estoque Obsoleto' =
+			
+			CALCULATE ( SUM ( RES34_20260824[Valor Total] ), RES34_20260824[Status] = "Obsoleto" )
+		displayFolder: Obsolescência
+		lineageTag: 8d408673-46f2-4112-b850-d94f03a825ff
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Saldo Estoque Obsoleto' =
+			
+			CALCULATE ( SUM ( RES34_20260824[Saldo Atual] ), RES34_20260824[Status] = "Obsoleto" )
+		displayFolder: Obsolescência
+		lineageTag: 1cc80350-e475-43b3-aa6c-b6ab2d383c4b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Valor Obsoleto sobre Total' = ```
+			
+			DIVIDE ( 
+			    [Valor Estoque Obsoleto], 
+			    CALCULATE ( SUM ( RES34_20260824[Valor Total] ), ALL ( RES34_20260824[Status] ) ) 
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Obsolescência
+		lineageTag: aef00b9d-28b8-4569-b9f6-a42ee1b1b927
+
+	measure 'Qtd. Materiais Obsoletos' =
+			
+			CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Estr.] ), RES34_20260824[Status] = "Obsoleto" )
+		formatString: 0
+		displayFolder: Obsolescência
+		lineageTag: dc1962f6-c90a-42d2-b74b-6bbbdbcd97a5
+
+	measure CurvaABC
+		lineageTag: 8b87ab45-d9cc-4d5b-88b9-d42a301406a4
+
+	measure 'Quantidade Total de Itens' = COUNT(Fato_Planejamento[Saldo])
+		formatString: 0
+		displayFolder: Visão de Estoque
+		lineageTag: d299feba-5bce-4019-a90c-b1b2e7fde592
+
+	measure 'Valor Estoque' = SUM(RES34_20260824[Valor Total])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: Visão de Estoque
+		lineageTag: fda17449-ed60-4075-9cd3-1ba3c79e5b59
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Materiais em Estoque' =
+			CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Saldo Atual] > 0 )
+		formatString: #,0
+		displayFolder: Visão de Estoque
+		lineageTag: 9ee31584-e413-45b0-9ff2-77db0e1b9e5e
+
+	measure '% Valor ABC' =
+			DIVIDE ( [Valor Estoque], CALCULATE ( [Valor Estoque], ALL ( PROD__20260824[Classe ABC] ) ) )
+		formatString: 0.0%
+		displayFolder: Visão de Estoque
+		lineageTag: c0193448-c495-4cc7-9b06-ce2673b55b84
+
+	measure '% Itens ABC' =
+			DIVIDE ( [Materiais em Estoque], CALCULATE ( [Materiais em Estoque], ALL ( PROD__20260824[Classe ABC] ) ) )
+		formatString: 0.0%
+		displayFolder: Visão de Estoque
+		lineageTag: df56f376-57a8-4fa5-98f4-618fba685abd
+
+	measure '% Valor na Classe A' =
+			CALCULATE ( [% Valor ABC], PROD__20260824[Classe ABC] = "A" )
+		formatString: 0.0%
+		displayFolder: Visão de Estoque
+		lineageTag: 9d618e3b-7ae0-44bb-8196-bde700486917
+
+	measure 'Itens na Classe A' =
+			CALCULATE ( [Materiais em Estoque], PROD__20260824[Classe ABC] = "A" )
+		formatString: #,0
+		displayFolder: Visão de Estoque
+		lineageTag: fea89778-62ed-4451-b04e-4d9058beeee8
+
+	measure 'Data Base Estoque' =
+			DATE ( 2026, 8, 24 )
+		formatString: Short Date
+		displayFolder: Indicadores Logísticos
+		lineageTag: 816e305f-dbec-4999-8d98-a4e7f0e7757f
+
+	measure 'Saldo Qtd (RES47)' =
+			SUM ( RES47_20260824[Quantidade] )
+		formatString: #,0.##
+		displayFolder: Indicadores Logísticos
+		lineageTag: 9f6e8fc8-47fb-4795-9934-b263305d3b4f
+
+	measure 'Valor Estoque (RES47)' =
+			SUM ( RES47_20260824[Valor Total] )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 5341cabd-9988-4c6f-974d-1d4e7272c0e4
+
+	measure 'Materiais (RES47)' =
+			DISTINCTCOUNT ( RES47_20260824[Código Reduzido] )
+		formatString: #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: b606349a-80c6-4edc-92e4-d9d4055023e9
+
+	measure 'Consumo 12m (Qtd)' =
+			VAR ref = [Data Base Estoque]
+			RETURN
+			    CALCULATE (
+			        SUM ( RES82_20260825[Qtde.] ),
+			        'Tipo de Movimentação'[Categoria] = "Consumo efetivo",
+			        REMOVEFILTERS ( dCalendario ),
+			        RES82_20260825[Entrada] > EDATE ( ref, -12 ),
+			        RES82_20260825[Entrada] <= ref
+			    )
+		formatString: #,0.##
+		displayFolder: Indicadores Logísticos
+		lineageTag: eaaa090e-bfc0-4886-829c-f5498fbe91f8
+
+	measure 'Consumo 12m (R$)' =
+			VAR ref = [Data Base Estoque]
+			RETURN
+			    CALCULATE (
+			        SUM ( RES82_20260825[Valor Total] ),
+			        'Tipo de Movimentação'[Categoria] = "Consumo efetivo",
+			        REMOVEFILTERS ( dCalendario ),
+			        RES82_20260825[Entrada] > EDATE ( ref, -12 ),
+			        RES82_20260825[Entrada] <= ref
+			    )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 94d50d0e-c67a-49e9-afc1-95f3aa78fb6e
+
+	measure 'Consumo Médio Mensal 12m' =
+			DIVIDE ( [Consumo 12m (Qtd)], 12 )
+		formatString: #,0.##
+		displayFolder: Indicadores Logísticos
+		lineageTag: 7173e0c8-598f-48aa-9cc3-4518df7fcc14
+
+	measure 'Cobertura Material (meses)' =
+			DIVIDE ( [Saldo Qtd (RES47)], [Consumo Médio Mensal 12m] )
+		formatString: #,0.0
+		displayFolder: Indicadores Logísticos
+		lineageTag: c31e2771-c617-49d9-9e50-1c577428825d
+
+	measure 'Cobertura Estoque (meses)' =
+			DIVIDE ( [Valor Estoque (RES47)], DIVIDE ( [Consumo 12m (R$)], 12 ) )
+		formatString: #,0.0
+		displayFolder: Indicadores Logísticos
+		lineageTag: ba595bef-3007-48a6-8a1f-691c7876374b
+
+	measure 'Estoque Médio 12m (R$)' =
+			VAR ref = [Data Base Estoque]
+			VAR atual = [Valor Estoque (RES47)]
+			RETURN
+			    AVERAGEX (
+			        GENERATESERIES ( 0, 12, 1 ),
+			        VAR d = IF ( [Value] = 12, ref, EOMONTH ( ref, [Value] - 12 ) )
+			        RETURN
+			            atual
+			                - CALCULATE (
+			                    SUM ( RES82_20260825[Valor Líquido] ),
+			                    REMOVEFILTERS ( dCalendario ),
+			                    RES82_20260825[Entrada] > d,
+			                    RES82_20260825[Entrada] <= ref
+			                )
+			    )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 4de5742b-da9b-494c-a8fe-86441e3848fc
+
+	measure 'Giro de Estoque' =
+			DIVIDE ( [Consumo 12m (R$)], [Estoque Médio 12m (R$)] )
+		formatString: #,0.00
+		displayFolder: Indicadores Logísticos
+		lineageTag: d52670a2-41c1-4c15-a790-6592c163b1cd
+
+	measure 'Estoque Fim do Mês (R$)' =
+			VAR ref = [Data Base Estoque]
+			VAR fimMes = MAX ( dCalendario[Date] )
+			VAR iniMes = MIN ( dCalendario[Date] )
+			VAR d = MIN ( fimMes, ref )
+			RETURN
+			    IF (
+			        fimMes >= EOMONTH ( ref, -12 ) && iniMes <= ref,
+			        [Valor Estoque (RES47)]
+			            - CALCULATE (
+			                SUM ( RES82_20260825[Valor Líquido] ),
+			                REMOVEFILTERS ( dCalendario ),
+			                RES82_20260825[Entrada] > d,
+			                RES82_20260825[Entrada] <= ref
+			            )
+			    )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 2a6db966-9acb-433f-ba98-9c1c4b353b25
+
+	measure 'Limite Risco (meses)' =
+			SELECTEDVALUE ( 'Parâmetro Risco'[Risco (meses)], 3 )
+		formatString: 0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 46e1d5f1-449a-47d7-93bf-eaaf4f7b0409
+
+	measure 'Limite Excesso (meses)' =
+			SELECTEDVALUE ( 'Parâmetro Excesso'[Excesso (meses)], 24 )
+		formatString: 0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 76d80cf4-c0b1-4647-8e39-24efd33e118f
+
+	measure 'Status Estoque' =
+			VAR s = COALESCE ( [Saldo Qtd (RES47)], 0 )
+			VAR c = COALESCE ( [Consumo Médio Mensal 12m], 0 )
+			VAR cob = DIVIDE ( s, c )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        c > 0 && s <= 0, "Ruptura",
+			        c > 0 && cob < [Limite Risco (meses)], "Risco de ruptura",
+			        c > 0 && cob > [Limite Excesso (meses)], "Excesso",
+			        c > 0, "Adequado",
+			        s > 0, "Sem consumo 12m",
+			        BLANK ()
+			    )
+		displayFolder: Indicadores Logísticos
+		lineageTag: 9f42d423-7e65-4137-bc0a-e0a3ec33cc39
+
+	measure 'Prioridade' =
+			SWITCH ( [Status Estoque], "Ruptura", 1, "Risco de ruptura", 2, "Excesso", 3, "Sem consumo 12m", 4, "Adequado", 5 )
+		formatString: 0
+		displayFolder: Indicadores Logísticos
+		lineageTag: d603818d-dfe0-4e96-8a31-7c1d6595d28c
+
+	measure 'Cor Status' =
+			SWITCH ( [Status Estoque], "Ruptura", "#C8102E", "Risco de ruptura", "#E07B00", "Adequado", "#2E8B57", "Excesso", "#1F5FBF", "Sem consumo 12m", "#7A869A" )
+		displayFolder: Indicadores Logísticos
+		lineageTag: 4225ead4-4205-46e6-b8f8-1c4c1a1ffb37
+
+	measure 'Cor Status Barra' =
+			SWITCH ( SELECTEDVALUE ( dStatus[Status] ), "Ruptura", "#C8102E", "Risco de ruptura", "#E07B00", "Adequado", "#2E8B57", "Excesso", "#1F5FBF", "Sem consumo 12m", "#7A869A" )
+		displayFolder: Indicadores Logísticos
+		lineageTag: c7d38df3-cb27-4bcb-a706-ede07acf9628
+
+	measure 'Materiais no Status' =
+			VAR st = SELECTEDVALUE ( dStatus[Status] )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( st ),
+			        COUNTROWS ( FILTER ( VALUES ( PROD__20260824[Alternativo] ), [Status Estoque] = st ) )
+			    )
+		formatString: #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: d61f00e3-c623-4032-9e83-97ceee55558e
+
+	measure 'Materiais em Ruptura' =
+			CALCULATE ( [Materiais no Status], dStatus[Status] = "Ruptura" )
+		formatString: #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: dc50d314-46d3-48d7-813a-6b2efb1012e0
+
+	measure 'Materiais em Risco de Ruptura' =
+			CALCULATE ( [Materiais no Status], dStatus[Status] = "Risco de ruptura" )
+		formatString: #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: d1953423-5456-46c6-847c-90aee401bd2b
+
+	measure 'Materiais em Excesso' =
+			CALCULATE ( [Materiais no Status], dStatus[Status] = "Excesso" )
+		formatString: #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 4b07ec72-f4c7-4f6d-af4e-1cd0b1d60c04
+
+	measure 'Materiais sem Consumo 12m' =
+			CALCULATE ( [Materiais no Status], dStatus[Status] = "Sem consumo 12m" )
+		formatString: #,0
+		displayFolder: Indicadores Logísticos
+		lineageTag: 34715aca-d740-4e8a-8ec4-2d7cd9cdfbf4
+
+	measure 'Consumo Efetivo (R$)' =
+			CALCULATE ( SUM ( RES82_20260825[Valor Total] ), 'Tipo de Movimentação'[Categoria] = "Consumo efetivo" )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: a4256d67-a9a8-4c6b-b347-bfeeeb1d4acc
+
+	measure 'Entradas por Compra (R$)' =
+			CALCULATE ( SUM ( RES82_20260825[Valor Total] ), 'Tipo de Movimentação'[Categoria] = "Entrada por compra" )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: 4ee24ef4-aec8-4ca9-95d4-aadd4151d8e2
+
+	measure 'Entradas por Compra 12m (R$)' =
+			VAR ref = [Data Base Estoque]
+			RETURN
+			    CALCULATE (
+			        SUM ( RES82_20260825[Valor Total] ),
+			        'Tipo de Movimentação'[Categoria] = "Entrada por compra",
+			        REMOVEFILTERS ( dCalendario ),
+			        RES82_20260825[Entrada] > EDATE ( ref, -12 ),
+			        RES82_20260825[Entrada] <= ref
+			    )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: 53aaaef9-34b5-440f-9c92-b3082b2719dd
+
+	measure 'Saídas 12m (R$)' =
+			VAR ref = [Data Base Estoque]
+			RETURN
+			    CALCULATE (
+			        SUM ( RES82_20260825[Valor Total] ),
+			        'Tipo de Movimentação'[Sentido] = "Saída",
+			        REMOVEFILTERS ( dCalendario ),
+			        RES82_20260825[Entrada] > EDATE ( ref, -12 ),
+			        RES82_20260825[Entrada] <= ref
+			    )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: 84cc4c9a-5854-4b34-add7-c3862fe7c852
+
+	measure 'Posição do Estoque (R$)' =
+			VAR ref = [Data Base Estoque]
+			VAR fimMes = MAX ( dCalendario[Date] )
+			VAR iniMes = MIN ( dCalendario[Date] )
+			VAR d = MIN ( fimMes, ref )
+			RETURN
+			    IF (
+			        iniMes <= ref && fimMes >= DATE ( 2021, 1, 31 ),
+			        [Valor Estoque (RES47)]
+			            - CALCULATE (
+			                SUM ( RES82_20260825[Valor Líquido] ),
+			                REMOVEFILTERS ( dCalendario ),
+			                RES82_20260825[Entrada] > d,
+			                RES82_20260825[Entrada] <= ref
+			            )
+			    )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: 23ebd0f3-eb8b-4ab4-a3a4-f1e3feaa7ecc
+
+	measure 'PCA Anual (RES43)' =
+			[PCA Mensal] * 12
+		formatString: #,0.##
+		displayFolder: Consumo e Aderência
+		lineageTag: 4c3489f3-3faa-49fd-9362-c0a5216700b0
+
+	measure 'Aderência PCA (%)' =
+			DIVIDE ( [Consumo 12m (Qtd)], [PCA Anual (RES43)] )
+		formatString: 0%
+		displayFolder: Consumo e Aderência
+		lineageTag: f94ec552-ebc4-48bd-a7fc-29ddb0a07c6b
+
+	measure 'Classe Aderência' =
+			VAR p = [PCA Anual (RES43)]
+			VAR c = COALESCE ( [Consumo 12m (Qtd)], 0 )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( p ),
+			        SWITCH (
+			            TRUE (),
+			            p <= 0 && c > 0, "Consumo sem PCA",
+			            p <= 0, BLANK (),
+			            c = 0, "Sem consumo",
+			            c / p < 0.8, "Abaixo do planejado",
+			            c / p <= 1.2, "Aderente",
+			            "Acima do planejado"
+			        )
+			    )
+		displayFolder: Consumo e Aderência
+		lineageTag: e1ec88bd-4611-4041-8701-edf063a17064
+
+	measure 'Materiais na Classe' =
+			VAR cl = SELECTEDVALUE ( dAderencia[Classe] )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( cl ),
+			        COUNTROWS ( FILTER ( VALUES ( PROD__20260824[Alternativo] ), [Classe Aderência] = cl ) )
+			    )
+		formatString: #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: 1c62b19f-28e3-45d5-b56b-079b94ecc11a
+
+	measure 'Materiais com PCA' =
+			COUNTROWS ( FILTER ( VALUES ( PROD__20260824[Alternativo] ), [PCA Anual (RES43)] > 0 ) )
+		formatString: #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: b8c6c1a6-1c1c-46ae-aa2b-53aaba1eb13d
+
+	measure 'Materiais Aderentes' =
+			CALCULATE ( [Materiais na Classe], dAderencia[Classe] = "Aderente" )
+		formatString: #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: ef506adf-624c-46e5-88e0-085cc146ff6a
+
+	measure 'Materiais Acima do PCA' =
+			CALCULATE ( [Materiais na Classe], dAderencia[Classe] = "Acima do planejado" )
+		formatString: #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: e4a97dfb-f836-4cb5-b9e9-168d22cb89e8
+
+	measure 'Materiais Abaixo do PCA' =
+			CALCULATE ( [Materiais na Classe], dAderencia[Classe] = "Abaixo do planejado" )
+		formatString: #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: ea73629a-9e61-4872-b482-a36bbc303800
+
+	measure 'Materiais com PCA sem Consumo' =
+			CALCULATE ( [Materiais na Classe], dAderencia[Classe] = "Sem consumo" )
+		formatString: #,0
+		displayFolder: Consumo e Aderência
+		lineageTag: e6e74013-dccd-45e0-a4a4-a71c807e0f04
+
+	measure '% Materiais Aderentes' =
+			DIVIDE ( [Materiais Aderentes], [Materiais com PCA] )
+		formatString: 0.0%
+		displayFolder: Consumo e Aderência
+		lineageTag: 3860cc82-e830-4f76-8541-41c09feaf128
+
+	measure 'Cor Aderência' =
+			SWITCH ( [Classe Aderência], "Acima do planejado", "#C8102E", "Aderente", "#2E8B57", "Abaixo do planejado", "#1F5FBF", "Sem consumo", "#7A869A", "Consumo sem PCA", "#E07B00" )
+		displayFolder: Consumo e Aderência
+		lineageTag: 5912ca35-dcdd-49c5-88d5-a48b04cd0df8
+
+	measure 'Cor Aderência Barra' =
+			SWITCH ( SELECTEDVALUE ( dAderencia[Classe] ), "Acima do planejado", "#C8102E", "Aderente", "#2E8B57", "Abaixo do planejado", "#1F5FBF", "Sem consumo", "#7A869A", "Consumo sem PCA", "#E07B00" )
+		displayFolder: Consumo e Aderência
+		lineageTag: 5b448c85-1278-46e4-822c-bb433920e4ce
+
+	measure 'Cor Categoria Saída' =
+			IF ( SELECTEDVALUE ( 'Tipo de Movimentação'[Categoria] ) = "Consumo efetivo", "#C8102E", "#8FA3C4" )
+		displayFolder: Consumo e Aderência
+		lineageTag: 0ddf2e2d-0b39-4a16-be8a-783c3c0d2b99
+
+	measure 'Consumo 12m (materiais com PCA)' =
+			IF ( NOT ISBLANK ( [PCA Anual (RES43)] ), COALESCE ( [Consumo 12m (Qtd)], 0 ) )
+		formatString: #,0.##
+		displayFolder: Consumo e Aderência
+		lineageTag: d3ae2551-84fd-44ee-90c6-e6acc8d40f90
+
+	measure 'Teste RES34 sem PROD' =
+			COUNTROWS ( FILTER ( RES34_20260824, ISBLANK ( RELATED ( PROD__20260824[Alternativo] ) ) ) ) + 0
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: b1f1014c-eba8-4525-a7c1-36ad3442809a
+
+	measure 'Teste RES82 sem PROD' =
+			COUNTROWS ( FILTER ( RES82_20260825, ISBLANK ( RELATED ( PROD__20260824[Estruturado] ) ) ) ) + 0
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: 6ca87c65-f169-4f8f-9027-5b5b58e2f021
+
+	measure 'Teste RES82 sem Classificação' =
+			COUNTROWS ( FILTER ( RES82_20260825, ISBLANK ( RELATED ( 'Tipo de Movimentação'[Categoria] ) ) ) ) + 0
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: d09eee86-83b7-430c-ad11-9f1faddb67f7
+
+	measure 'Teste RES47 sem RES34' =
+			COUNTROWS ( FILTER ( VALUES ( PROD__20260824[Alternativo] ), NOT ISBLANK ( [Materiais (RES47)] ) && ISBLANK ( CALCULATE ( COUNTROWS ( RES34_20260824 ) ) ) ) ) + 0
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: 48ed4f5d-5acc-4636-a824-0abc26b36806
+
+	measure 'Teste Diferença RES47 RES34' =
+			[Valor Estoque (RES47)] - [Valor Estoque]
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Metodologia
+		lineageTag: cc47eb3d-a5e0-441f-895d-251d627a7e7e
+
+	measure 'Consumo 2025 RES82 (Qtd)' =
+			CALCULATE ( SUM ( RES82_20260825[Qtde.] ), 'Tipo de Movimentação'[Categoria] = "Consumo efetivo", REMOVEFILTERS ( dCalendario ), dCalendario[Ano] = 2025 )
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: ca8678ba-0027-40bf-92da-5ca469f0466b
+
+	measure 'Consumo 2025 RES75 (Qtd)' =
+			SUM ( RES75_20260824[Consumo 2025] )
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: cc917e1b-28d9-4b73-b420-afbd528ef341
+
+	measure 'Teste Consumo RES82 RES75' =
+			DIVIDE ( [Consumo 2025 RES82 (Qtd)], [Consumo 2025 RES75 (Qtd)] )
+		formatString: 0.0%
+		displayFolder: Metodologia
+		lineageTag: 12b3cfaa-55e2-409a-a243-31a3d8c3a5a7
+
+	measure 'Teste Saldo Negativo' =
+			VAR ref = [Data Base Estoque]
+			VAR ini = EOMONTH ( ref, -12 )
+			RETURN
+			    COUNTROWS (
+			        FILTER (
+			            VALUES ( PROD__20260824[Alternativo] ),
+			            COALESCE ( [Saldo Qtd (RES47)], 0 )
+			                - CALCULATE (
+			                    SUM ( RES82_20260825[Qtd Líquida] ),
+			                    REMOVEFILTERS ( dCalendario ),
+			                    RES82_20260825[Entrada] > ini,
+			                    RES82_20260825[Entrada] <= ref
+			                ) < -0.001
+			        )
+			    ) + 0
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: 05518cd2-c17b-4753-81d5-4468fb34fae6
+
+	measure 'Teste RMs Base 8' =
+			VAR total = COUNTROWS ( 'Movimentações Materiais_20260825' )
+			VAR achadas = COUNTROWS ( FILTER ( 'Movimentações Materiais_20260825', CALCULATE ( COUNTROWS ( RES82_20260825 ) ) > 0 ) )
+			RETURN DIVIDE ( achadas, total )
+		formatString: 0.0%
+		displayFolder: Metodologia
+		lineageTag: 6015a449-95dc-43aa-a139-b3bac37361b3
+
+	measure 'Resultado do Teste' =
+			SWITCH (
+			    SELECTEDVALUE ( 'Testes de Consistência'[Nº] ),
+			    1, FORMAT ( [Teste RES34 sem PROD], "#,0" ),
+			    2, FORMAT ( [Teste RES82 sem PROD], "#,0" ) & " linhas",
+			    3, FORMAT ( [Teste RES82 sem Classificação], "#,0" ),
+			    4, FORMAT ( [Teste RES47 sem RES34], "#,0" ) & " materiais",
+			    5, FORMAT ( [Teste Diferença RES47 RES34], "R$ #,0" ),
+			    6, FORMAT ( [Teste Consumo RES82 RES75], "0.0%" ),
+			    7, FORMAT ( [Teste Saldo Negativo], "#,0" ) & " materiais",
+			    8, FORMAT ( [Teste RMs Base 8], "0.0%" )
+			)
+		displayFolder: Metodologia
+		lineageTag: 2c8ecfb1-bea5-46f7-89a3-bdedaa6b9cda
+
+	measure 'Lançamentos RES82' =
+			COUNTROWS ( RES82_20260825 )
+		formatString: #,0
+		displayFolder: Metodologia
+		lineageTag: 45d5c92c-fb86-4834-a2a5-020b696ac269
+
+	measure 'Valor Lançado RES82 (R$)' =
+			SUM ( RES82_20260825[Valor Total] )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Metodologia
+		lineageTag: 4ecb09c2-1c37-422a-8509-832f0715f58e
+
+	measure 'Estoque Inicial 12m (Qtd)' =
+			VAR ref = [Data Base Estoque]
+			VAR movLiquido =
+			    CALCULATE (
+			        SUM ( RES82_20260825[Qtd Líquida] ),
+			        REMOVEFILTERS ( dCalendario ),
+			        RES82_20260825[Entrada] > EDATE ( ref, -12 ),
+			        RES82_20260825[Entrada] <= ref
+			    )
+			RETURN MAX ( 0, COALESCE ( [Saldo Qtd (RES47)], 0 ) - COALESCE ( movLiquido, 0 ) )
+		formatString: #,0.##
+		displayFolder: Giro e Rotatividade
+		lineageTag: 4b90cd7f-9da7-4ef3-9fc7-a9b0cbd54b6d
+
+	measure 'Estoque Médio Material (Qtd)' =
+			( [Estoque Inicial 12m (Qtd)] + COALESCE ( [Saldo Qtd (RES47)], 0 ) ) / 2
+		formatString: #,0.##
+		displayFolder: Giro e Rotatividade
+		lineageTag: 7e9ff73d-c33f-4cc8-b92c-222df2e32453
+
+	measure 'Giro Material 12m' =
+			DIVIDE ( [Consumo 12m (Qtd)], [Estoque Médio Material (Qtd)] )
+		formatString: #,0.00
+		displayFolder: Giro e Rotatividade
+		lineageTag: 32aab23d-49ff-4652-9887-6f19d7d5989a
+
+	measure 'Permanência Material (dias)' =
+			DIVIDE ( 365, [Giro Material 12m] )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: ad793134-7102-45c0-8fcf-f6132c6bf925
+
+	measure 'Tempo Médio de Permanência (dias)' =
+			DIVIDE ( 365, [Giro de Estoque] )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: 6ff6b2f7-a114-47ee-8a15-71aeb543ba1a
+
+	measure 'Classe Rotatividade' =
+			VAR c = COALESCE ( [Consumo 12m (Qtd)], 0 )
+			VAR s = COALESCE ( [Saldo Qtd (RES47)], 0 )
+			VAR g = [Giro Material 12m]
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        c > 0 && ( ISBLANK ( g ) || g >= 4 ), "Alta (giro ≥ 4)",
+			        c > 0 && g >= 1, "Média (giro de 1 a 4)",
+			        c > 0, "Baixa (giro < 1)",
+			        s > 0, "Sem giro (sem consumo)",
+			        BLANK ()
+			    )
+		displayFolder: Giro e Rotatividade
+		lineageTag: 1704db97-c591-4b92-a640-7402d56a5ef3
+
+	measure 'Materiais na Rotatividade' =
+			VAR r = SELECTEDVALUE ( dRotatividade[Rotatividade] )
+			RETURN
+			    IF (
+			        NOT ISBLANK ( r ),
+			        COUNTROWS ( FILTER ( VALUES ( PROD__20260824[Alternativo] ), [Classe Rotatividade] = r ) )
+			    )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: 8ad17ea2-a7dc-43e9-a84a-9a37716b4cf7
+
+	measure 'Materiais Alta Rotatividade' =
+			CALCULATE ( [Materiais na Rotatividade], dRotatividade[Rotatividade] = "Alta (giro ≥ 4)" )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: bf1dea12-2c3a-452a-b504-ffcf73968974
+
+	measure 'Materiais Média Rotatividade' =
+			CALCULATE ( [Materiais na Rotatividade], dRotatividade[Rotatividade] = "Média (giro de 1 a 4)" )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: 8d81c73b-4a97-434c-a5a3-931bb78bb7a7
+
+	measure 'Materiais Baixa Rotatividade' =
+			CALCULATE ( [Materiais na Rotatividade], dRotatividade[Rotatividade] = "Baixa (giro < 1)" )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: d92fa5e0-8010-48a2-8966-202463608658
+
+	measure 'Materiais Sem Giro' =
+			CALCULATE ( [Materiais na Rotatividade], dRotatividade[Rotatividade] = "Sem giro (sem consumo)" )
+		formatString: #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: 7c8570ad-5db0-4eec-a75f-d0e3456a0fc8
+
+	measure 'Cor Rotatividade' =
+			SWITCH ( [Classe Rotatividade], "Alta (giro ≥ 4)", "#2E8B57", "Média (giro de 1 a 4)", "#1F5FBF", "Baixa (giro < 1)", "#E07B00", "Sem giro (sem consumo)", "#C8102E" )
+		displayFolder: Giro e Rotatividade
+		lineageTag: f7df4589-df30-4e43-8ee7-b0602ebdcc6e
+
+	measure 'Cor Rotatividade Barra' =
+			SWITCH ( SELECTEDVALUE ( dRotatividade[Rotatividade] ), "Alta (giro ≥ 4)", "#2E8B57", "Média (giro de 1 a 4)", "#1F5FBF", "Baixa (giro < 1)", "#E07B00", "Sem giro (sem consumo)", "#C8102E" )
+		displayFolder: Giro e Rotatividade
+		lineageTag: b997d83e-9680-456d-8107-a2aceb2eefee
+
+	measure 'Consumo Médio por Mês do Ano (R$)' =
+			CALCULATE (
+			    AVERAGEX ( VALUES ( dCalendario[Ano] ), [Consumo Efetivo (R$)] ),
+			    dCalendario[Ano] >= 2021,
+			    dCalendario[Ano] <= 2025
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Giro e Rotatividade
+		lineageTag: f4e28a9e-3a0f-4a1f-8d1b-c889aa7b8e6d
+
+	measure 'Índice de Sazonalidade' =
+			VAR mes = [Consumo Médio por Mês do Ano (R$)]
+			VAR media = CALCULATE ( AVERAGEX ( VALUES ( dCalendario[Mês Num] ), [Consumo Médio por Mês do Ano (R$)] ), REMOVEFILTERS ( dCalendario[Mês do Ano], dCalendario[Mês Num] ) )
+			RETURN DIVIDE ( mes, media )
+		formatString: 0.00
+		displayFolder: Giro e Rotatividade
+		lineageTag: 1963b062-c09d-44a0-808b-ebf9da25214a
+
+	measure 'Material Selecionado' =
+			HASONEVALUE ( PROD__20260824[Alternativo] )
+		displayFolder: Evolução por Material
+		lineageTag: 0bc38a88-0741-44c6-856b-db1695640f63
+
+	measure 'Entradas (Qtd)' =
+			CALCULATE ( SUM ( RES82_20260825[Qtde.] ), 'Tipo de Movimentação'[Sentido] = "Entrada" )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 64738396-3792-4d3b-baf7-4298f0c18eaf
+
+	measure 'Saídas (Qtd)' =
+			CALCULATE ( SUM ( RES82_20260825[Qtde.] ), 'Tipo de Movimentação'[Sentido] = "Saída" )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 9ee7527c-8c5e-4e7f-abc5-2cc3190b4f77
+
+	measure 'Consumo Efetivo (Qtd)' =
+			CALCULATE ( SUM ( RES82_20260825[Qtde.] ), 'Tipo de Movimentação'[Categoria] = "Consumo efetivo" )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 033fdfad-9592-439d-92f6-07d9fe68baa9
+
+	measure 'Entradas - Item (Qtd)' =
+			IF ( [Material Selecionado], [Entradas (Qtd)] )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: cd247843-7cda-4087-aec3-a13e6d1de66e
+
+	measure 'Saídas - Item (Qtd)' =
+			IF ( [Material Selecionado], [Saídas (Qtd)] )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 92c0a0f3-9719-49a3-bd2c-d44450e157c7
+
+	measure 'Consumo Efetivo - Item (Qtd)' =
+			IF ( [Material Selecionado], [Consumo Efetivo (Qtd)] )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 120d32b9-8ba9-4ff8-9e23-8cf04e512be8
+
+	measure 'Posição do Estoque - Item (Qtd)' =
+			VAR ref = [Data Base Estoque]
+			VAR fimMes = MAX ( dCalendario[Date] )
+			VAR iniMes = MIN ( dCalendario[Date] )
+			VAR d = MIN ( fimMes, ref )
+			RETURN
+			    IF (
+			        [Material Selecionado] && iniMes <= ref && fimMes >= DATE ( 2021, 1, 31 ),
+			        COALESCE ( [Saldo Qtd (RES47)], 0 )
+			            - COALESCE (
+			                CALCULATE (
+			                    SUM ( RES82_20260825[Qtd Líquida] ),
+			                    REMOVEFILTERS ( dCalendario ),
+			                    RES82_20260825[Entrada] > d,
+			                    RES82_20260825[Entrada] <= ref
+			                ),
+			                0
+			            )
+			    )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 32d1e552-547d-4af8-a716-91a8d55d48a6
+
+	measure 'Consumo 12m Anterior (Qtd)' =
+			VAR ref = [Data Base Estoque]
+			RETURN
+			    CALCULATE (
+			        SUM ( RES82_20260825[Qtde.] ),
+			        'Tipo de Movimentação'[Categoria] = "Consumo efetivo",
+			        REMOVEFILTERS ( dCalendario ),
+			        RES82_20260825[Entrada] > EDATE ( ref, -24 ),
+			        RES82_20260825[Entrada] <= EDATE ( ref, -12 )
+			    )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 94b57a55-da96-41f6-8bfc-63d4f232723c
+
+	measure 'Variação Consumo 12m (%)' =
+			DIVIDE ( [Consumo 12m (Qtd)] - [Consumo 12m Anterior (Qtd)], [Consumo 12m Anterior (Qtd)] )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Evolução por Material
+		lineageTag: 1e6331cd-e01c-44dd-89ff-fd8a6a802317
+
+	measure 'Saldo Atual - Item' =
+			IF ( [Material Selecionado], COALESCE ( [Saldo Qtd (RES47)], 0 ) )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 9869e29d-6223-42fa-9e86-5652207e416f
+
+	measure 'Valor em Estoque - Item' =
+			IF ( [Material Selecionado], COALESCE ( [Valor Estoque (RES47)], 0 ) )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Evolução por Material
+		lineageTag: ad369349-661e-45c7-a09c-8208e868a212
+
+	measure 'Consumo 12m - Item' =
+			IF ( [Material Selecionado], COALESCE ( [Consumo 12m (Qtd)], 0 ) )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 9f5c7648-d2aa-4ac9-83d8-5eb6f7a6cd77
+
+	measure 'Consumo 12m Anterior - Item' =
+			IF ( [Material Selecionado], COALESCE ( [Consumo 12m Anterior (Qtd)], 0 ) )
+		formatString: #,0.##
+		displayFolder: Evolução por Material
+		lineageTag: 8044eaba-d736-413e-b86c-5624e447f133
+
+	measure 'Variação Consumo - Item' =
+			IF ( [Material Selecionado], COALESCE ( [Variação Consumo 12m (%)], 0 ) )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Evolução por Material
+		lineageTag: f992f641-a5de-4bca-8e98-7e89de2ea50f
+
+	measure 'Cobertura - Item (meses)' =
+			IF ( [Material Selecionado], COALESCE ( [Cobertura Material (meses)], 0 ) )
+		formatString: #,0.0
+		displayFolder: Evolução por Material
+		lineageTag: a5a1768c-2d8d-4c01-be46-e9304a95c6f5
+
+	measure 'Situação - Item' =
+			IF ( [Material Selecionado], COALESCE ( [Status Estoque], "-" ), "Selecione um material" )
+		displayFolder: Evolução por Material
+		lineageTag: f99e7061-4e20-4568-a7a8-8d57917a7f49
+
+	measure 'Materiais no Ponto de Reposição' =
+			DISTINCTCOUNT ( RES43_20260824[CPTM] )
+		formatString: #,0
+		displayFolder: Reposição
+		lineageTag: ec9f0855-1e48-447a-9ad5-1c1d8585c585
+
+	measure 'Materiais Prioritários' =
+			CALCULATE ( DISTINCTCOUNT ( RES43_20260824[CPTM] ), RES43_20260824[Prior.] = "Sim" )
+		formatString: #,0
+		displayFolder: Reposição
+		lineageTag: 3502a878-ee6f-421a-96d2-055416aefdab
+
+	measure 'Materiais na Etapa' =
+			SWITCH (
+			    SELECTEDVALUE ( dEtapa[Ordem] ),
+			    1, COUNTROWS ( FILTER ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Quantidade Necessária p/ Compra] ) ) > 0 ) ),
+			    2, COUNTROWS ( FILTER ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[RMs Aberta] ) ) > 0 ) ),
+			    3, COUNTROWS ( FILTER ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[SCs Provisórias] ) ) > 0 ) ),
+			    4, COUNTROWS ( FILTER ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Qtd. Contratada] ) ) > 0 ) ),
+			    5, COUNTROWS ( FILTER ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[OFs a Entregar] ) ) > 0 ) )
+			)
+		formatString: #,0
+		displayFolder: Reposição
+		lineageTag: 380200f4-1282-455d-a6a2-3178a008fbe2
+
+	measure 'Etapa do Processo' =
+			VAR rm = CALCULATE ( MAX ( RES43_20260824[RMs Aberta] ) )
+			VAR sc = CALCULATE ( MAX ( RES43_20260824[SCs Provisórias] ) )
+			VAR ct = CALCULATE ( MAX ( RES43_20260824[Qtd. Contratada] ) )
+			VAR ofe = CALCULATE ( MAX ( RES43_20260824[OFs a Entregar] ) )
+			VAR nec = CALCULATE ( MAX ( RES43_20260824[Quantidade Necessária p/ Compra] ) )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        ofe > 0, "OF a entregar",
+			        ct > 0, "Em contratação",
+			        sc > 0, "SC provisória",
+			        rm > 0, "RM aberta",
+			        nec > 0, "Sem processo iniciado",
+			        BLANK ()
+			    )
+		displayFolder: Reposição
+		lineageTag: 1457c158-3cac-45e1-930c-1d6822d75363
+
+	measure 'Materiais sem Processo Iniciado' =
+			COUNTROWS ( FILTER ( VALUES ( RES43_20260824[CPTM] ), [Etapa do Processo] = "Sem processo iniciado" ) )
+		formatString: #,0
+		displayFolder: Reposição
+		lineageTag: 464b0966-6f0e-4036-b806-c90b00a129d7
+
+	measure 'Cobertura com Pedidos (meses)' =
+			VAR saldo = SUMX ( VALUES ( RES43_20260824[CPTM] ), CALCULATE ( MAX ( RES43_20260824[Saldo] ) ) )
+			VAR pedidos = [OFs a Entregar] + [Contratações em Andamento]
+			RETURN DIVIDE ( saldo + pedidos, [Consumo Médio Mensal] )
+		formatString: #,0.0
+		displayFolder: Reposição
+		lineageTag: 3b5e1b52-d763-40a5-9d9d-51a6daf71567
+
+	measure 'Materiais em Ruptura no Ponto de Reposição' =
+			COUNTROWS ( FILTER ( VALUES ( PROD__20260824[Alternativo] ), NOT ISBLANK ( CALCULATE ( COUNTROWS ( RES43_20260824 ) ) ) && [Status Estoque] = "Ruptura" ) )
+		formatString: #,0
+		displayFolder: Reposição
+		lineageTag: 83b687f4-3326-4f26-99b4-cf69fc9b7c68
+
+	measure 'Cor Etapa' =
+			SWITCH ( [Etapa do Processo], "Sem processo iniciado", "#C8102E", "RM aberta", "#E07B00", "SC provisória", "#8FA3C4", "Em contratação", "#1F5FBF", "OF a entregar", "#2E8B57" )
+		displayFolder: Reposição
+		lineageTag: 62e25139-1aaa-4e73-9eb5-3a71e23b7066
+
+	measure 'Obsoletos sem Destinação' =
+			CALCULATE (
+			    DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ),
+			    RES34_20260824[Status] = "Obsoleto",
+			    ISBLANK ( RES34_20260824[Leilão] ), ISBLANK ( RES34_20260824[Doação] ), ISBLANK ( RES34_20260824[Reuso] ),
+			    ISBLANK ( RES34_20260824[Reciclagem] ), ISBLANK ( RES34_20260824[Log. Reversa] ), ISBLANK ( RES34_20260824[Aterro] )
+			)
+		formatString: #,0
+		displayFolder: Obsolescência
+		lineageTag: af3c68cc-c81b-48be-8e97-1ca2a3a78419
+
+	measure 'Materiais por Destinação Indicada' =
+			SWITCH (
+			    SELECTEDVALUE ( dDestino[Destinação] ),
+			    "Leilão", CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Leilão] = "X" ),
+			    "Doação", CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Doação] = "X" ),
+			    "Reuso", CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Reuso] = "X" ),
+			    "Reciclagem", CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Reciclagem] = "X" ),
+			    "Log. Reversa", CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Log. Reversa] = "X" ),
+			    "Aterro", CALCULATE ( DISTINCTCOUNT ( RES34_20260824[Cód. Red.] ), RES34_20260824[Aterro] = "X" )
+			)
+		formatString: #,0
+		displayFolder: Obsolescência
+		lineageTag: 08d76f41-89cb-425c-a200-f392b5e43802
+
+	measure 'Obsoletos com Destinação' =
+			[Qtd. Materiais Obsoletos] - [Obsoletos sem Destinação]
+		formatString: #,0
+		displayFolder: Obsolescência
+		lineageTag: a29289b5-39cc-498d-b58f-d7d175d274f5
+
+	measure 'Valor Obsoleto sem Destinação' =
+			CALCULATE (
+			    SUM ( RES34_20260824[Valor Total] ),
+			    RES34_20260824[Status] = "Obsoleto",
+			    ISBLANK ( RES34_20260824[Leilão] ), ISBLANK ( RES34_20260824[Doação] ), ISBLANK ( RES34_20260824[Reuso] ),
+			    ISBLANK ( RES34_20260824[Reciclagem] ), ISBLANK ( RES34_20260824[Log. Reversa] ), ISBLANK ( RES34_20260824[Aterro] )
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Obsolescência
+		lineageTag: ee4d00fd-d037-4729-a72a-80e7acd2ad5d
+
+	column Value
+		formatString: 0
+		lineageTag: 9c1ee771-b6c6-44bb-aeec-e3754d58f0ed
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = {BLANK()}
+
+	annotation PBI_Id = c59e985f3b9c47cb8e31f68b09bae7ed
+

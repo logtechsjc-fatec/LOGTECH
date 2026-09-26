@@ -1,0 +1,50 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["PastaDados","PROD__20260824","RES43_20260824","Centro de Custo_20260824","RES34_20260824","RES47_20260824","RES75_20260824","Fato_Planejamento","RES82_20260825","Movimentações Materiais_20260825"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table PROD__20260824
+ref table DateTableTemplate_a2d28372-52dc-4c33-ba88-261e634c2725
+ref table LocalDateTable_db5c79a1-4f3e-44c0-8558-16fe91f45dea
+ref table RES43_20260824
+ref table 'Centro de Custo_20260824'
+ref table LocalDateTable_b6105cf4-171e-4de4-a391-bb60898972ee
+ref table LocalDateTable_3453a8ba-f0bc-4b68-a0e2-e7e24627a86d
+ref table RES34_20260824
+ref table LocalDateTable_ba79d5d8-9607-4b8a-9d75-47e496d79115
+ref table LocalDateTable_59cdfea5-454a-46c4-9bc8-0d4552063c18
+ref table RES47_20260824
+ref table LocalDateTable_5f3756ee-82ef-4264-bbd0-a772902e2b10
+ref table LocalDateTable_e2c118ca-dabf-48df-8012-dceb27a65343
+ref table RES75_20260824
+ref table Fato_Planejamento
+ref table Medidas
+ref table CurvaABC
+
+ref table RES82_20260825
+ref table 'Movimentações Materiais_20260825'
+ref table 'Tipo de Movimentação'
+ref table dCalendario
+ref table 'Parâmetro Risco'
+ref table 'Parâmetro Excesso'
+ref table dStatus
+ref table dAderencia
+ref table 'Dicionário de Indicadores'
+ref table 'Mapa de Relacionamentos'
+ref table 'Testes de Consistência'
+ref table dRotatividade
+ref table dEtapa
+ref table dDestino
+
+ref cultureInfo pt-BR
+

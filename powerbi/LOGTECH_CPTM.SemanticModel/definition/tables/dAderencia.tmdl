@@ -1,0 +1,30 @@
+table dAderencia
+	lineageTag: d4514701-b5ce-4052-b653-2d4bbd6b4d3e
+
+	column Classe
+		lineageTag: fafe8d42-0241-4856-a978-3bdf69faa89b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Classe]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		lineageTag: 38dbcca7-8e80-41fe-876b-f42fb8238e58
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dAderencia = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Classe", STRING,
+				    "Ordem", INTEGER,
+				    { { "Acima do planejado", 1 }, { "Aderente", 2 }, { "Abaixo do planejado", 3 }, { "Sem consumo", 4 }, { "Consumo sem PCA", 5 } }
+				)
+
+	annotation PBI_Id = cbde17b42b754798bf4563da40ca6538

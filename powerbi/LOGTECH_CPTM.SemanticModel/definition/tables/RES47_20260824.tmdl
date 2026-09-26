@@ -1,0 +1,149 @@
+table RES47_20260824
+	lineageTag: f16251b0-55ee-43c6-be5e-d223568f92d8
+
+	column 'Código Reduzido'
+		dataType: int64
+		formatString: 0
+		lineageTag: cdf83e6f-ef53-4306-91ee-3aa92ffa1d02
+		summarizeBy: sum
+		sourceColumn: Código Reduzido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Código Estruturado'
+		dataType: string
+		lineageTag: 09aecefd-0f2a-43e5-9196-d51ce60eb6fe
+		summarizeBy: none
+		sourceColumn: Código Estruturado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: c9bcbc52-900f-47da-98b5-5016ece226b7
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Consumo'
+		dataType: string
+		lineageTag: 8ae4fea2-d86e-45c7-810e-92b7e4f51c46
+		summarizeBy: none
+		sourceColumn: Tipo Consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Utilização
+		dataType: string
+		lineageTag: f6e96674-84fc-4c2a-b9a3-24594e7d2e4e
+		summarizeBy: none
+		sourceColumn: Utilização
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unid. Medida'
+		dataType: string
+		lineageTag: 87357451-e06f-4e52-a2c3-3e1d405577a4
+		summarizeBy: none
+		sourceColumn: Unid. Medida
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantidade
+		dataType: double
+		lineageTag: 02137ee7-2122-40c0-9ef8-d823a0e77f31
+		summarizeBy: sum
+		sourceColumn: Quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Custo Médio'
+		dataType: double
+		lineageTag: 45f726fb-adca-43cb-9456-f8ac1c479ca1
+		summarizeBy: sum
+		sourceColumn: Custo Médio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Total'
+		dataType: double
+		lineageTag: 8ae9321c-51a4-496c-8363-6fe9c43b1cbc
+		summarizeBy: sum
+		sourceColumn: Valor Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Última Movimentação'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a9c2df6f-eb96-4323-87de-157cfa060fd9
+		summarizeBy: none
+		sourceColumn: Última Movimentação
+
+		variation Variation
+			isDefault
+			relationship: c5d7ff42-0bee-445f-9af6-7a0c3a9c189f
+			defaultHierarchy: LocalDateTable_5f3756ee-82ef-4264-bbd0-a772902e2b10.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Último Consumo'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 293f5685-c5cb-4128-9aac-d32391bfc882
+		summarizeBy: none
+		sourceColumn: Último Consumo
+
+		variation Variation
+			isDefault
+			relationship: bd81b5f6-b1e7-4e54-a068-c99b571a1a36
+			defaultHierarchy: LocalDateTable_e2c118ca-dabf-48df-8012-dceb27a65343.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Faixa sem Consumo' =
+			VAR ref = DATE ( 2026, 8, 24 )
+			VAR u = RES47_20260824[Último Consumo]
+			VAR meses = IF ( ISBLANK ( u ), BLANK (), DATEDIFF ( u, ref, MONTH ) )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        ISBLANK ( u ), "6. Nunca consumido",
+			        meses <= 12, "1. Até 12 meses",
+			        meses <= 24, "2. 12 a 24 meses",
+			        meses <= 36, "3. 24 a 36 meses",
+			        meses <= 60, "4. 36 a 60 meses",
+			        "5. Mais de 60 meses"
+			    )
+		dataType: string
+		lineageTag: 35f93eff-0ee3-472b-811d-b27c6723f38f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RES47_20260824 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents(PastaDados & "5. RES47_20260824.xlsx"), null, true),
+				    #"Page 1_Sheet" = Fonte{[Item="Page 1",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Page 1_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Código Reduzido", Int64.Type}, {"Código Estruturado", type text}, {"Descrição", type text}, {"Tipo Consumo", type text}, {"Utilização", type text}, {"Unid. Medida", type text}, {"Quantidade", type number}, {"Custo Médio", type number}, {"Valor Total", type number}, {"Última Movimentação", type date}, {"Último Consumo", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,31 @@
+table dStatus
+	lineageTag: 457ab405-2baa-46cc-b3af-2cc09899c742
+
+	column Status
+		lineageTag: ede9b914-6634-4d52-8524-ca76bd5701a1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Status]
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem
+		formatString: 0
+		lineageTag: 0eb0a781-f991-4342-8e22-dadb55067229
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ordem]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dStatus = calculated
+		mode: import
+		source =
+				DATATABLE (
+				    "Status", STRING,
+				    "Ordem", INTEGER,
+				    { { "Ruptura", 1 }, { "Risco de ruptura", 2 }, { "Adequado", 3 }, { "Excesso", 4 }, { "Sem consumo 12m", 5 } }
+				)
+
+	annotation PBI_Id = de186b1f199f47afba8ede10b72388db
