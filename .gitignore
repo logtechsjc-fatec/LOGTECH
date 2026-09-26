@@ -1,0 +1,19 @@
+# Power BI Project (PBIP) – arquivos locais que não devem ir para o repositório
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Bases do ERP ALVO (dados internos da CPTM – não versionar)
+dados/*.xlsx
+dados/*.xls
+*.pbix
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+saida/
+
+# Sistema
+.DS_Store
+Thumbs.db
+~$*
