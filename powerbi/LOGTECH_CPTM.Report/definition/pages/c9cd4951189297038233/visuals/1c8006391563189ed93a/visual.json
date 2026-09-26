@@ -1,0 +1,294 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "1c8006391563189ed93a",
+  "position": {
+    "x": 1236,
+    "y": 684,
+    "z": 16000,
+    "height": 372,
+    "width": 644,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "COMO CALCULAMOS",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "13pt",
+                      "color": "#C8102E"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Consumo efetivo: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "saídas por requisição (manutenção, operação, administração e engenharia) da RES82. Transferências, devoluções, ajustes, remessas, vendas e descartes não entram.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Consumo médio mensal = ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "consumo dos últimos 12 meses ÷ 12.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Cobertura (meses) = ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "saldo atual (RES47) ÷ consumo médio mensal.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Estoque médio = ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "média de 13 posições mensais (ago/25 a ago/26), reconstruídas a partir do saldo de 24/08/2026 e das entradas e saídas da RES82.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Giro = ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "consumo efetivo de 12 meses (R$) ÷ estoque médio (R$).",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ruptura: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "saldo zero com consumo nos últimos 12 meses.  ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  },
+                  {
+                    "value": "Risco: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "cobertura abaixo do limite.  ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  },
+                  {
+                    "value": "Excesso: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "cobertura acima do limite.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Criticidade: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "itens Essenciais e Estratégicos (classificação da CPTM). Curva ABC mede relevância financeira, não criticidade.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
