@@ -1,0 +1,202 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "3bbccfdf7aa74c9ea307",
+  "position": {
+    "x": 956,
+    "y": 116,
+    "z": 4000,
+    "height": 80,
+    "width": 924,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "PCA anual = ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "PCA mensal (RES43, coluna K) × 12.   ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  },
+                  {
+                    "value": "Aderência = ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "consumo efetivo dos últimos 12 meses ÷ PCA anual.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Aderente: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "80% a 120% do PCA.   ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  },
+                  {
+                    "value": "Acima: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "mais de 120%.   ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  },
+                  {
+                    "value": "Abaixo: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#0B2A5B"
+                    }
+                  },
+                  {
+                    "value": "menos de 80%.   Cards e aderência: últimos 12 meses (set/25 a ago/26).",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#33415C"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
