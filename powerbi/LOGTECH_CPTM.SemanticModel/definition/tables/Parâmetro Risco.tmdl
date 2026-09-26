@@ -1,0 +1,18 @@
+table 'Parâmetro Risco'
+	lineageTag: 29a22fab-13fe-486a-83c2-a13841427aad
+
+	column 'Risco (meses)'
+		formatString: 0
+		lineageTag: 79a340a7-2dc5-43c7-8c00-3f064eabdd61
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Risco (meses)]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parâmetro Risco' = calculated
+		mode: import
+		source =
+				DATATABLE ( "Risco (meses)", INTEGER, { { 1 }, { 2 }, { 3 }, { 6 }, { 9 }, { 12 } } )
+
+	annotation PBI_Id = 7730d9b481d244c482787a81ca9b53a1

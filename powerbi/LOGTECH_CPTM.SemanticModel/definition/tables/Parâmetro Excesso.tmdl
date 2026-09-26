@@ -1,0 +1,18 @@
+table 'Parâmetro Excesso'
+	lineageTag: 7cee596f-792c-4245-839f-2851b16a37c6
+
+	column 'Excesso (meses)'
+		formatString: 0
+		lineageTag: cc12abf9-92a0-4bb5-ad2d-6aa86539bda8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Excesso (meses)]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parâmetro Excesso' = calculated
+		mode: import
+		source =
+				DATATABLE ( "Excesso (meses)", INTEGER, { { 12 }, { 18 }, { 24 }, { 36 }, { 48 }, { 60 } } )
+
+	annotation PBI_Id = 124fa6da7bc74f5d8b6a733e03c52b8f
