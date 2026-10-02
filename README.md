@@ -36,7 +36,7 @@ Olá, somos a equipe **LOGTECH**! Neste projeto desenvolvemos uma solução de B
 - [Sprints](#sprints)
 - [Tecnologias](#tecnologias)
 - [Equipe](#equipe)
-- [MKT](#mkt)
+- [MVP](#mvp)
 
 ## Sobre a LOGTECH
 
@@ -264,9 +264,11 @@ Ruptura, excesso e obsolescência, funil de reposição, navegação, layout par
 |  Team Member  | Lucas Barsaglini |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-barsaglini-71774b188/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Barsaglini99)   |
 |  Team Member  | João Victor Berlatos Dos Santos  |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joão-victor-santos-b54656338/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/joao3122br)     |
 
-## MKT
+## MVP
 
 Vídeo de entendimento sobre o projeto: [youtube.com/@logtech-l5c](https://youtube.com/@logtech-l5c?si=1088QxAbd1m3u8M2)
+
+Link do Projeto no Power Bi: https://app.powerbi.com/view?r=eyJrIjoiYmZmZGJmYzItODUwMS00MWIxLThmYWItZTVjMWVlYjEzMjZkIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9
 
 ---
 
