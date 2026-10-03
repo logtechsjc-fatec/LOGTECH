@@ -86,13 +86,6 @@ O painel tem **8 páginas**, com navegação por botões, filtros sincronizados 
 | 7 | **Obsolescência** | Valor obsoleto, obsoletos por almoxarifado, destinação indicada e lista de materiais obsoletos |
 | 8 | **Metodologia** | Dicionário de indicadores, classificação das movimentações, relacionamentos e testes de consistência |
 
-<!-- Salve os prints em IMAGENS/dashboard/ com os nomes abaixo para que apareçam aqui -->
-| Visão de Estoque | Indicadores Logísticos |
-|---|---|
-| ![Visão de Estoque](IMAGENS/dashboard/01_visao_de_estoque.png) | ![Indicadores Logísticos](IMAGENS/dashboard/02_indicadores_logisticos.png) |
-| **Reposição** | **Metodologia** |
-| ![Reposição](IMAGENS/dashboard/06_reposicao.png) | ![Metodologia](IMAGENS/dashboard/08_metodologia.png) |
-
 ## Indicadores e regras de cálculo
 
 | Indicador | Regra | Fonte |
@@ -269,6 +262,8 @@ Ruptura, excesso e obsolescência, funil de reposição, navegação, layout par
 Vídeo de entendimento sobre o projeto: [youtube.com/@logtech-l5c](https://youtube.com/@logtech-l5c?si=1088QxAbd1m3u8M2)
 
 Link do Projeto no Power Bi: https://app.powerbi.com/view?r=eyJrIjoiYmZmZGJmYzItODUwMS00MWIxLThmYWItZTVjMWVlYjEzMjZkIiwidCI6ImVhYmU2NGM1LTY4ZjUtNGE3Ni04MzAxLTk1NzdhNjc5ZTQ0OSIsImMiOjR9
+
+Relatório do Projeto: [Relatorio_Projeto_Integrador_CPTM.pdf](https://github.com/user-attachments/files/33012997/Relatorio_Projeto_Integrador_CPTM.pdf)
 
 ---
 
