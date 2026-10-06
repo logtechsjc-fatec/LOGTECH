@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Controle, análise e acompanhamento da evolução e do giro de estoque de materiais na CPTM</b><br/>
-  Aprendizagem por Projeto Integrador (API) · Fatec São José dos Campos · Logística · 2026
+  Aprendizagem por Projeto Integrador (API) · Fatec São José dos Campos · Tecnologia em Logística · 2026
 </p>
 
 <p align="center">
